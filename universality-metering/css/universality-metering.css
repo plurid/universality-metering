@@ -1,0 +1,43 @@
+html, body {
+  background-color: #1a1a1a;
+  height: 100%;
+  margin: 0;
+  width: 100%; }
+
+.univ-metering {
+  position: absolute;
+  top: 270px;
+  left: 360px;
+  width: 500px;
+  height: 400px;
+  background-color: #333333; }
+
+.univ-selector {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #404040;
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: space-evenly; }
+
+.univ-bar {
+  width: 3px;
+  height: 100%;
+  background-color: #0d0d0d; }
+
+.um-word:hover {
+  color: red; }
+
+.um-sentence:hover {
+  color: red; }
+
+.container {
+  width: 50%;
+  font-size: 20px;
+  margin: 100px auto;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
