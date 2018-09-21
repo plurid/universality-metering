@@ -157,3 +157,60 @@
 // //     //     });
 // //     // }
 // // }
+
+
+
+let umParagraphs = document.getElementsByClassName('um-paragraph');
+let originalContent: string[] = [];
+let paragraphsContent  = [];
+
+const paragraphBs = 'This might be bullshit.'
+const paragraphTr = '(T)read carefully.'
+
+for (let umParagraph of umParagraphs) {
+    let content = umParagraph.innerHTML;
+    let contentArray = [];
+    originalContent.push(content);
+
+    const regex = />(.*?)</g;
+    let found: RegExpExecArray | null;
+
+    while ((found = regex.exec(content)) !== null) {
+        if (/\S/.test(found[1])) {
+            contentArray.push(found[1]);
+        }
+    }
+
+    paragraphsContent.push(contentArray);
+}
+
+let strReplace = originalContent[0];
+
+strReplace = strReplace.replace(paragraphsContent[0][0], paragraphBs);
+strReplace = strReplace.replace(paragraphsContent[0][1], paragraphTr);
+strReplace = strReplace.replace(paragraphsContent[0][2], paragraphBs);
+
+console.log(paragraphsContent[0][0]);
+
+for (let umParagraph of <any>umParagraphs) {
+    for (let i = 1; i < 30; i++) {
+        if (i % 2 != 0) {
+            setTimeout(() => {
+                console.log(i);
+                console.log('bs');
+                umParagraph.innerHTML = strReplace;
+            }, 3000 * i);
+        }
+
+        if (i % 2 == 0) {
+            setTimeout(() => {
+                console.log(i);
+                console.log('orig');
+                umParagraph.innerHTML = originalContent[0];
+            }, 3000 * i);
+        }
+    }
+}
+
+console.log(originalContent);
+console.log(paragraphsContent);
