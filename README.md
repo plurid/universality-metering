@@ -15,19 +15,19 @@ The `Universality Metering` stands by the above spring of/for action. It is the 
 Due to the highly sensitive, multi-dimensional matters of human (or general idea-based, that is, grounded in touch and sight) language, a single crisp number is only recommended as an introductive step into this valuation metric for the universability of a language entity:
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/docs/images/universality-crisp.jpg" height="500px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/docs/images/universality-crisp.png" height="500px">
 </p>
 
 A more advanced metric would be obtained using fuzzy numbers (types 1 and 2):
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/docs/images/universality-fuzzy.jpg" height="500px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/docs/images/universality-fuzzy.png" height="500px">
 </p>
 
 Or even a pluridimensional manner of valuation:
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/docs/images/universality-pluridimensional.jpg" height="500px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/docs/images/universality-pluridimensional.png" height="500px">
 </p>
 
 The dimensions could remain nameless, or could be given names like `clarity`, `expresiveness`, `poetry`, and so forth.
