@@ -4,7 +4,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 
 const miniCssExtract = new MiniCssExtractPlugin({
-    filename: "../css/universality-metering.css",
+    filename: "./styles.css",
     disable: process.env.NODE_ENV === "development"
 });
 const path = require('path');
@@ -13,10 +13,10 @@ const path = require('path');
 module.exports = {
     mode: 'development',
     // mode: 'production',
-    entry: './app.js',
+    entry: './app.ts',
     output: {
-        filename: 'universality-metering.js',
-        path: path.resolve(__dirname, 'universality-metering/js')
+        filename: 'script.js',
+        path: path.resolve(__dirname, 'pkg/')
     },
     optimization: {
         minimizer: [
