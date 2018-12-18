@@ -1,10 +1,10 @@
 {
     "name": "universality-metering",
     "version": "0.1.0",
-    "description": "Set a universality number to a sentence or paragraph.",
+    "description": "Grading System Interface for High-Level Abstracted, Multi-Peer, Societal Influenced Content",
     "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
     "license": "MIT",
-    "main": "app.js",
+    "main": "./pkg/script.js",
     "scripts": {
         "build": "webpack",
         "test": "jest ./test/unit",
