@@ -1,4 +1,27 @@
+<p align="center">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/identity/logo-square.png" height="200px">
+</p>
+
+
+<p align="center">
+    <a href="https://www.npmjs.com/package/universality-metering">
+        <img src="https://img.shields.io/npm/v/universality-metering.svg?colorB=581b38&logo=npm&style=for-the-badge" alt="Version">
+    </a>
+    <a href="https://github.com/plurid/universality-metering/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-blue.svg?colorB=492356&style=for-the-badge" alt="License">
+    </a>
+</p>
+
+
+
 # Universality Metering
+
+Grading system for high-level abstracted, multi-peer, societal influenced content.
+
+
++ [Reasons](#reasons)
++ [Concept](#concept)
+
 
 
 ## Reasons
