@@ -1,7 +1,7 @@
 {
     "name": "universality-metering",
-    "version": "0.1.0",
-    "description": "Grading System Interface for High-Level Abstracted, Multi-Peer, Societal Influenced Content",
+    "version": "0.1.1",
+    "description": "Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content",
     "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
     "license": "MIT",
     "main": "./pkg/script.js",
