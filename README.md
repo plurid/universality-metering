@@ -41,6 +41,26 @@ The `Universality Metering` stands by the above spring of/for action. It is the 
 
 ## Concept
 
+
+Text with the `UM` mark at the top right corner.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um.png" height="350px">
+</p>
+
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-hover.png" height="350px">
+</p>
+
+
+Selection for the `Sentence` mode of text splitting which will allow valuations on the sentence level.
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-select.png" height="350px">
+</p>
+
+
 Due to the highly sensitive, multi-dimensional matters of human (or general idea-based, that is, grounded in touch and sight) language, a single crisp number is only recommended as an introductive step into this valuation metric for the universability of a language entity:
 
 <p align="center">
