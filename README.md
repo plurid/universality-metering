@@ -67,6 +67,78 @@ The dimensions could remain nameless, or could be given names like `clarity`, `e
 ## Technology
 
 
+ All rating values are between `-1000` and `1000`.
+
+
+The user rates in standard mode with crisp numbers
+
+    345, -129, 551, -875
+
+and so forth.
+
+
+The user rates in standard mode with fuzzy numbers type-1
+
+    [-250, 351, 0.5] // to sort out the encoding
+
+
+The user rates in standard mode with fuzzy numbers type-2
+
+     // to sort out the encoding
+
+
+The user rates in pluridimensional mode with crisp numbers (10 dimensions)
+
+    [233, -155, 920, -415, -241, 475, -363, 80, 607, -224]
+
+
+The user rates in pluridimensional mode with fuzzy numbers type-1 (10 dimensions)
+
+    // to sort out the encoding
+
+
+The user rates in pluridimensional mode with fuzzy numbers type-2 (10 dimensions)
+
+    // to sort out the encoding
+
+
+
+
+How the user Inputs Values?
+
+Clicking through the interface.
+
+
+How the `HTML` element passes the clicking values?
+
+Events emitting.
+
+
+How the `universality-metering` software knows which user added which input?
+
+It doesn't. When the event is emitted, the application must record which user saved which value for which text/image/at which timeframe in video, etc.
+
+
+How the values are stored?
+
+
+
+What calculations are made with them?
+
+
+How are conversions made between
+
++ simple mode crisp numbers
++ simple mode fuzzy numbers type-1
++ simple mode fuzzy numbers type-2
++ pluridimensional mode crisp numbers
++ pluridimensional mode fuzzy numbers type-1
++ pluridimensional mode fuzzy numbers type-2
+
+?
+
+
+Should users see how other users rated? How their friends rated? How are friends defined?
 
 
 
