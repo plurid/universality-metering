@@ -70,19 +70,21 @@ The dimensions could remain nameless, or could be given names like `clarity`, `e
  All rating values are between `-1000` and `1000`.
 
 
-The user rates in standard mode with crisp numbers
+The user rates in monodimensional mode with crisp numbers
 
-    345, -129, 551, -875
-
-and so forth.
+    345 or -129 or 551 or -875
 
 
-The user rates in standard mode with fuzzy numbers type-1
+The user rates in monodimensional mode with fuzzy numbers type-1
 
-    [-250, 351, 0.5] // to sort out the encoding
+    // to sort out the encoding
+    // maybe
+    [-250, 351, 0.5]
+    lower limit, upper limit, membership level (for a triangle)
+    How are other number shapes defined?
 
 
-The user rates in standard mode with fuzzy numbers type-2
+The user rates in monodimensional mode with fuzzy numbers type-2
 
      // to sort out the encoding
 
@@ -128,9 +130,9 @@ What calculations are made with them?
 
 How are conversions made between
 
-+ simple mode crisp numbers
-+ simple mode fuzzy numbers type-1
-+ simple mode fuzzy numbers type-2
++ monodimensional crisp numbers
++ monodimensional fuzzy numbers type-1
++ monodimensional fuzzy numbers type-2
 + pluridimensional mode crisp numbers
 + pluridimensional mode fuzzy numbers type-1
 + pluridimensional mode fuzzy numbers type-2
