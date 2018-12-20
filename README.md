@@ -24,7 +24,7 @@ Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Conten
 + [Technology](#technology)
 + [Usage](#usage)
     + [Setup](#setup)
-    + [HTML universality-metering Element](#html-universality-metering-element)
+    + [HTML `universality-metering` Element](#html-universality-metering-element)
 
 
 
@@ -69,6 +69,8 @@ The dimensions could remain nameless, or could be given names like `clarity`, `e
 
 
 
+
+
 ## Usage
 
 ### Setup
@@ -86,5 +88,8 @@ using `Webpack` or anything else to bundle.
 
 
 
-### HTML universality-metering Element
+### HTML `universality-metering` Element
+
+
+Add the `<universality-metering>` HTML Element to a `<div>` or other HTML Element.
 
