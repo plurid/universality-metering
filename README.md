@@ -142,6 +142,8 @@ How are conversions made between
 
 Should users see how other users rated? How their friends rated? How are friends defined?
 
+The users should see their given rating, if any, and the median from the user given input?, and the estimated level given by an AI?
+
 
 
 
