@@ -60,6 +60,8 @@ Selection for the `Sentence` mode of text splitting which will allow valuations 
     <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-select.png" height="350px">
 </p>
 
+If the text contains images, videos, canvas and/or iframes elements the selection modes will reflect that by adding the `Image`, `Video`, `Canvas` and `Iframe` mode respectively.
+
 
 Due to the highly sensitive, multi-dimensional matters of human (or general idea-based, that is, grounded in touch and sight) language, a single crisp number is only recommended as an introductive step into this valuation metric for the universability of a language entity:
 
