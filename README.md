@@ -16,21 +16,27 @@
 
 # Universality Metering
 
-Grading System Interface for High-Level Abstracted, Multi-Peer, Societal Influenced Content
+Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content
 
 
-+ [Reasons](#reasons)
++ [Reason](#reason)
 + [Concept](#concept)
++ [Technology](#technology)
++ [Usage](#usage)
+    + [Setup](#setup)
+    + [HTML universality-metering Element](#html-universality-metering-element)
 
 
 
-## Reasons
+## Reason
 
     Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.[1]
 
     1. Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals. Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.
 
 The `Universality Metering` stands by the above spring of/for action. It is the quest and the question of a such `Universality Metering` to obtain a user-given, subjective number pertaining to the `universality` of a sentence, paragraph, or even a single word.
+
+
 
 
 ## Concept
@@ -54,3 +60,31 @@ Or even a pluridimensional manner of valuation:
 </p>
 
 The dimensions could remain nameless, or could be given names like `clarity`, `expresiveness`, `poetry`, and so forth.
+
+
+
+
+## Technology
+
+
+
+
+## Usage
+
+### Setup
+
+Add the `universality-metering` `script.js` and `styles.css` to the application from the `./pkg` folder (or install with `npm`).
+
+    npm install universality-metering
+
+and import
+
+    import 'universality-metering';
+    import 'universality-metering/pkg/styles.css';
+
+using `Webpack` or anything else to bundle.
+
+
+
+### HTML universality-metering Element
+
