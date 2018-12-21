@@ -45,7 +45,7 @@ The `Universality Metering` stands by the above spring of/for action. It is the 
 Text with the `UM` mark at the top right corner.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um.png" height="400px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um.png" width="80%">
 </p>
 
 
