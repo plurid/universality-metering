@@ -51,22 +51,33 @@ const capitalize = (str: string): string => {
 }
 
 
-const getAllSiblings = (element: HTMLElement) => {
-    const children = [...element.parentElement.children];
+const getAllSiblings = (element: Element) => {
+    const parent: Element = element.parentElement;
+    const children: Element[] = Array.from(parent.children);
     return children.filter(child => child !== element);
 }
 
 const textModes = ['text', 'fragment', 'paragraph', 'sentence', 'word'];
 
-const checkModes = (element: Element) => {
+const checkModes = (element: Element): string | Array<string> | boolean => {
     switch (element.nodeName) {
         case 'P':
-            return textModes
-            break;
+            return textModes;
         case 'IMG':
-            return 'image'
+            return 'image';
+        case 'VIDEO':
+            return 'video';
+        case 'CANVAS':
+        case 'IFRAME':
+            return 'other';
+        case 'DIV':
+            // console.log('DIV -- recursivity');
+            // console.log(element.children);
+            const arr = Array.from(element.children);
+            let a = arr.map(el => checkModes(el));
+            console.log(a);
         default:
-            return false
+            return false;
     }
 }
 
@@ -91,8 +102,7 @@ class UniversalityMetering extends LitElement {
 
         this.siblings = getAllSiblings(this);
 
-        this.siblings.map(sib => console.log(checkModes(sib)));
-        console.log(this.siblings);
+        let activeModes = this.siblings.map(sib => checkModes(sib));
     }
 
     createRenderRoot() {
@@ -101,7 +111,7 @@ class UniversalityMetering extends LitElement {
 
     setMode(mode: string) {
         this.mode = mode;
-        console.log(this.mode);
+        // console.log(this.mode);
         this.toggle();
     }
 
