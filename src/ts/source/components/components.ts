@@ -1,1 +1,1 @@
-import '.universality-metering/universality-metering';
+import './universality-metering/universality-metering';
