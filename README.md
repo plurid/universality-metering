@@ -45,19 +45,19 @@ The `Universality Metering` stands by the above spring of/for action. It is the 
 Text with the `UM` mark at the top right corner.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um.png" width="800px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um.png" width="700px">
 </p>
 
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-hover.png" width="800px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-hover.png" width="700px">
 </p>
 
 
 Selection for the `Sentence` mode of text splitting which will allow valuations on the sentence level.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-select.png" width="800px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um-select.png" width="700px">
 </p>
 
 If the text contains images, videos, canvas and/or iframes elements the selection modes will reflect that by adding the `Image`, `Video`, `Canvas` and `Iframe` mode respectively.
@@ -66,19 +66,19 @@ If the text contains images, videos, canvas and/or iframes elements the selectio
 Due to the highly sensitive, multi-dimensional matters of human (or general idea-based, that is, grounded in touch and sight) language, a single crisp number is only recommended as an introductive step into this valuation metric for the universability of a language entity:
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-crisp.png" width="800px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-crisp.png" width="700px">
 </p>
 
 A more advanced metric would be obtained using fuzzy numbers (types 1 and 2):
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-fuzzy.png" width="800px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-fuzzy.png" width="700px">
 </p>
 
 Or even a pluridimensional manner of valuation:
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-pluridimensional.png" width="800px">
+    <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-pluridimensional.png" width="700px">
 </p>
 
 The dimensions could remain nameless, or could be given names like `clarity`, `expresiveness`, `poetry`, and so forth.
