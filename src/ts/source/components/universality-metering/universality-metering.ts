@@ -1,8 +1,9 @@
 import { LitElement, html } from '@polymer/lit-element';
 import { TemplateResult } from 'lit-html';
 
-// to use some kind of data-um-id?
 
+
+// to use some kind of data-um-id?
 // <um-text data-um-id="u7ngb413">
 //      <um-paragraph data-um-id="039zzmn1">
 //          <um-sentence data-um-id="k4j1kjma">
@@ -13,7 +14,6 @@ import { TemplateResult } from 'lit-html';
 //      <um-image data-um-id="65j1plka"> <img ...> </um-image>
 //  </um-text>
 //
-
 const UM = {
     text: {
         word: {
@@ -46,11 +46,37 @@ const UM = {
 }
 
 
+const capitalize = (str: string): string => {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+
+const getAllSiblings = (element: HTMLElement) => {
+    const children = [...element.parentElement.children];
+    return children.filter(child => child !== element);
+}
+
+const textModes = ['text', 'fragment', 'paragraph', 'sentence', 'word'];
+
+const checkModes = (element: Element) => {
+    switch (element.nodeName) {
+        case 'P':
+            return textModes
+            break;
+        case 'IMG':
+            return 'image'
+        default:
+            return false
+    }
+}
+
+
 
 class UniversalityMetering extends LitElement {
     private toggled: boolean;
     private selectors: TemplateResult;
     private mode: string;
+    private siblings: Element[];
 
     static get properties() {
         return {
@@ -62,6 +88,11 @@ class UniversalityMetering extends LitElement {
         this.toggled = false;
         this.mode = '';
         this.selectors = html``;
+
+        this.siblings = getAllSiblings(this);
+
+        this.siblings.map(sib => console.log(checkModes(sib)));
+        console.log(this.siblings);
     }
 
     createRenderRoot() {
@@ -122,8 +153,3 @@ class UniversalityMetering extends LitElement {
 
 
 customElements.define('universality-metering', UniversalityMetering);
-
-
-const capitalize = (str: string): string => {
-    return str.charAt(0).toUpperCase() + str.slice(1)
-}
