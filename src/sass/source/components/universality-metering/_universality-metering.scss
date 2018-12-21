@@ -33,11 +33,22 @@ universality-metering {
     color: white;
 }
 
-.universality-metering-selector-um {
-    background-color: hsl(0, 0%, 75%);
+.universality-metering-selector:first-child {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+.universality-metering-selector:last-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+.universality-metering-selector-um-toggled {
+    background-color: hsl(0, 0%, 75%);
+}
+
+
 
 
 

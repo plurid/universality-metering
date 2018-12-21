@@ -1,4 +1,5 @@
 import { LitElement, html } from '@polymer/lit-element';
+import { TemplateResult } from 'lit-html';
 
 // to use some kind of data-um-id?
 
@@ -47,6 +48,9 @@ const UM = {
 
 
 class UniversalityMetering extends LitElement {
+    private toggled: boolean;
+    private selectors: TemplateResult;
+
     static get properties() {
         return {
         };
@@ -54,6 +58,8 @@ class UniversalityMetering extends LitElement {
 
     constructor() {
         super();
+        this.toggled = false;
+        this.selectors = html``;
     }
 
     createRenderRoot() {
@@ -61,17 +67,36 @@ class UniversalityMetering extends LitElement {
     }
 
     toggle() {
-        console.log('toggle')
+        // const umBtn = this.querySelector('universality-metering-selector-um');
+        // console.log(umBtn);
+
+        if (this.toggled === true) {
+            this.selectors = html``;
+            this.toggled = false;
+            // umBtn.classList.remove('universality-metering-selector-um-toggled');
+        } else {
+            this.selectors = html`
+                <div class="universality-metering-selector">Text</div>
+                <div class="universality-metering-selector">Paragraph</div>
+                <div class="universality-metering-selector">Sentence</div>
+                <div class="universality-metering-selector">Word</div>
+            `;
+            // umBtn.classList.add('universality-metering-selector-um-toggled');
+            this.toggled = true;
+        }
+
+        this.requestUpdate();
     }
 
     render() {
         return html`
             <div class="universality-metering-selectors">
-                <div class="universality-metering-selector universality-metering-selector-um" @click=${ (e: Event) => this.toggle() }>UM</div>
-                <div class="universality-metering-selector">Text</div>
-                <div class="universality-metering-selector">Paragraph</div>
-                <div class="universality-metering-selector">Sentence</div>
-                <div class="universality-metering-selector">Word</div>
+                <div class="universality-metering-selector universality-metering-selector-um"
+                    @click=${ (e: Event) => this.toggle() }
+                >
+                    UM
+                </div>
+                ${ this.selectors }
             </div>
         `;
     }
