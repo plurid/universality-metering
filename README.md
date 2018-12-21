@@ -30,9 +30,11 @@ Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Conten
 
 ## Reason
 
-    Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.[*]
+    Act only according to that maxim whereby you can, at the same time,
+    will that it should become a universal law.[*]
 
-    * Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals. Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.
+    * Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals.
+    Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.
 
 The `Universality Metering` stands by the above spring of/for action. It is the quest and the question of a such `Universality Metering` to obtain a user-given, subjective number pertaining to the `universality` of a sentence, paragraph, or even a single word.
 
