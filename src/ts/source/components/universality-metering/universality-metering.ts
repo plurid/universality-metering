@@ -83,7 +83,9 @@ class UniversalityMetering extends LitElement {
             this.toggled = false;
             // umBtn.classList.remove('universality-metering-selector-um-toggled');
         } else {
-            const modes = ['text', 'paragraph', 'sentence', 'word'];
+            // to be dinamically resolved depending on what the div with the
+            // universality-metering element contains
+            const modes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
 
             this.selectors = html`
                 ${
