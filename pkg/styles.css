@@ -55,6 +55,9 @@ universality-metering {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px; }
 
+.universality-metering-selector-um {
+  width: 30px; }
+
 .universality-metering-selector-um-toggled {
   background-color: #bfbfbf; }
 
