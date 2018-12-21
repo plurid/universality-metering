@@ -4,7 +4,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 
 const miniCssExtract = new MiniCssExtractPlugin({
-    filename: "./styles.css",
+    filename: `./styles.css`,
     disable: process.env.NODE_ENV === "development"
 });
 const path = require('path');
@@ -31,6 +31,9 @@ module.exports = {
     plugins: [
         miniCssExtract
     ],
+    resolve: {
+        extensions: [".ts", ".tsx", ".js"]
+    },
     module: {
         rules: [
             {
@@ -38,6 +41,7 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader',
                 ],
             },
@@ -45,7 +49,7 @@ module.exports = {
                 test: /\.ts$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "awesome-typescript-loader"
+                    loader: 'awesome-typescript-loader'
                 }
             }
         ]
