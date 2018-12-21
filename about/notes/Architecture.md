@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 
+
+# Architecture
+
 To have a button for being able to show UM on hover?
 
 and a button for entity selection (word, sentence, paragraph, full text)?
