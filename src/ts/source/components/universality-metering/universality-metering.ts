@@ -1,5 +1,49 @@
 import { LitElement, html } from '@polymer/lit-element';
 
+// to use some kind of data-um-id?
+
+// <um-text data-um-id="u7ngb413">
+//      <um-paragraph data-um-id="039zzmn1">
+//          <um-sentence data-um-id="k4j1kjma">
+//              <um-word data-um-id="hj3nz21a">If</um-word> <um-word data-um-id="ok31nk51">one</um-word>
+//                   ...
+//          </um-sentence>
+//      </um-paragraph>
+//      <um-image data-um-id="65j1plka"> <img ...> </um-image>
+//  </um-text>
+//
+
+const UM = {
+    text: {
+        word: {
+            if: {
+
+            },
+            one: {
+
+            }
+        },
+        sentence: {
+
+        },
+        paragraph: {
+
+        }
+    },
+    image: {
+
+    },
+    video: {
+
+    },
+    iframe: {
+
+    },
+    canvas: {
+
+    }
+}
+
 
 
 class UniversalityMetering extends LitElement {
