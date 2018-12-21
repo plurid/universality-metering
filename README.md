@@ -36,7 +36,9 @@ Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Conten
     * Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals.
     Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.
 
-The `Universality Metering` stands by the above spring of/for action. It is the quest and the question of a such `Universality Metering` to obtain a user-given, subjective number pertaining to the `universality` of a sentence, paragraph, or even a single word.
+The `Universality Metering` stands by the above spring of/for action.
+
+It is the quest and the question of a such `Universality Metering` to obtain a user-given, subjective number pertaining to the `universality` of an image, video sequence, text, paragraph, sentence, or even a single word.
 
 
 
@@ -44,7 +46,7 @@ The `Universality Metering` stands by the above spring of/for action. It is the 
 ## Concept
 
 
-Text with the `UM` mark at the top right corner.
+A text will have the `UM` mark at the top right corner (or any other place, if set up differently).
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-um.png" width="700px">
@@ -65,7 +67,7 @@ Selection for the `Sentence` mode of text splitting which will allow valuations 
 If the text contains images, videos, canvas and/or iframes elements the selection modes will reflect that by adding the `Image`, `Video`, `Canvas` and `Iframe` mode respectively.
 
 
-Due to the highly sensitive, multi-dimensional matters of human (or general idea-based, that is, grounded in touch and sight) language, a single crisp number is only recommended as an introductive step into this valuation metric for the universability of a language entity:
+Due to the highly sensitive, multi-dimensional matters of human (or general idea-based, that is, grounded in touch and sight) language, a single crisp number is only recommended as an introductive step into this valuation metric for the universability of a high-level abstracted conceptual entity:
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-crisp.png" width="700px">
@@ -83,7 +85,11 @@ Or even a pluridimensional manner of valuation:
     <img src="https://raw.githubusercontent.com/plurid/universality-metering/master/about/docs/images/universality-pluridimensional.png" width="700px">
 </p>
 
-The dimensions could remain nameless, or could be given names like `clarity`, `expresiveness`, `poetry`, and so forth.
+The 10 dimensions will be named
+
++ `clarity`,
++ `expresiveness`,
++ `poetry`,
 
 
 
