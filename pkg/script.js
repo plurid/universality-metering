@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************************************************!*\
   !*** ./node_modules/@polymer/lit-element/lit-element.js ***!
   \**********************************************************/
-/*! exports provided: html, svg, LitElement, notEqual, UpdatingElement, customElement, property, query, queryAll, eventOptions */
+/*! exports provided: notEqual, UpdatingElement, customElement, property, query, queryAll, eventOptions, html, svg, LitElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -355,7 +355,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\nclass UniversalityMetering extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n    }\n    createRenderRoot() {\n        return this;\n    }\n    render() {\n        return lit_element_1.html `\n            <div>\n                UM\n            </div>\n        `;\n    }\n}\ncustomElements.define('universality-metering', UniversalityMetering);\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering/universality-metering.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\nclass UniversalityMetering extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n    }\n    createRenderRoot() {\n        return this;\n    }\n    render() {\n        return lit_element_1.html `\n            <div class=\"universality-metering-selector\">\n                UM\n            </div>\n        `;\n    }\n}\ncustomElements.define('universality-metering', UniversalityMetering);\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering/universality-metering.ts?");
 
 /***/ }),
 

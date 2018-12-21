@@ -1,0 +1,73 @@
+universality-metering {
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.universality-metering-selector {
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    border-radius: 15px;
+    background-color: hsl(0, 0%, 95%);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    height: 30px;
+    width: 50px;
+    font-size: 15px;
+}
+
+.universality-metering-selector:hover {
+    background-color: hsl(0, 0%, 25%);
+    color: white;
+}
+
+
+
+// .univ-metering {
+//     position: absolute;
+//     top: 270px;
+//     left: 360px;
+//     width: 500px;
+//     height: 400px;
+//     background-color: hsl(0, 0%, 20%);
+// }
+
+
+// .univ-selector {
+//     position: relative;
+//     height: 300px;
+//     width: 100%;
+//     margin: 0 auto;
+//     background-color: hsl(0, 0%, 25%);
+//     // flex-wrap: nowrap;
+//     // flex-direction: row;
+//     flex-grow: 1;
+//     // grid-auto-columns: repeat(4, 1fr);
+//     overflow: auto;
+//     display: flex;
+//     justify-content: space-evenly;
+// }
+
+
+// .univ-bar {
+//     // margin: 0px 40px;
+//     width: 3px;
+//     height: 100%;
+//     background-color: hsl(0, 0%, 5%);
+// }
+
+
+
+// .um-word:hover {
+//     color: red;
+// }
+
+// .um-sentence:hover {
+//     color: red;
+// }

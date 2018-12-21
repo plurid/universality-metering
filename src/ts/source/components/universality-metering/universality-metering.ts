@@ -18,7 +18,7 @@ class UniversalityMetering extends LitElement {
 
     render() {
         return html`
-            <div>
+            <div class="universality-metering-selector">
                 UM
             </div>
         `;

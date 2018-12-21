@@ -1,50 +1,6 @@
 html, body {
-    background-color: hsl(0, 0%, 10%);
+    background-color: hsl(0, 0%, 90%);
     height: 100%;
     margin: 0;
     width: 100%;
-}
-
-
-.univ-metering {
-    position: absolute;
-    top: 270px;
-    left: 360px;
-    width: 500px;
-    height: 400px;
-    background-color: hsl(0, 0%, 20%);
-}
-
-
-.univ-selector {
-    position: relative;
-    height: 300px;
-    width: 100%;
-    margin: 0 auto;
-    background-color: hsl(0, 0%, 25%);
-    // flex-wrap: nowrap;
-    // flex-direction: row;
-    flex-grow: 1;
-    // grid-auto-columns: repeat(4, 1fr);
-    overflow: auto;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-.univ-bar {
-    // margin: 0px 40px;
-    width: 3px;
-    height: 100%;
-    background-color: hsl(0, 0%, 5%);
-}
-
-
-
-.um-word:hover {
-    color: red;
-}
-
-.um-sentence:hover {
-    color: red;
 }
