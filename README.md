@@ -87,11 +87,18 @@ Or even a pluridimensional manner of valuation:
 
 The 10 dimensions will be named
 
-+ `clarity`,
-+ `expresiveness`,
-+ `poetry`,
++ truthness
++ clarity,
++ accuracy,
++ poetry,
++ manipulativeness
++ malevolence
++
++
++
++
 
-
+(to be refined)
 
 
 ## Technology
