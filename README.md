@@ -87,12 +87,12 @@ Or even a pluridimensional manner of valuation:
 
 The 10 dimensions will be named
 
-+ truthness
++ truthness,
 + clarity,
 + accuracy,
 + poetry,
-+ manipulativeness
-+ malevolence
++ manipulativeness,
++ malevolence,
 +
 +
 +
