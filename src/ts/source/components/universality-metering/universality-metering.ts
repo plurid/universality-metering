@@ -50,6 +50,7 @@ const UM = {
 class UniversalityMetering extends LitElement {
     private toggled: boolean;
     private selectors: TemplateResult;
+    private mode: string;
 
     static get properties() {
         return {
@@ -59,11 +60,18 @@ class UniversalityMetering extends LitElement {
     constructor() {
         super();
         this.toggled = false;
+        this.mode = '';
         this.selectors = html``;
     }
 
     createRenderRoot() {
         return this;
+    }
+
+    setMode(mode: string) {
+        this.mode = mode;
+        console.log(this.mode);
+        this.toggle();
     }
 
     toggle() {
@@ -75,11 +83,19 @@ class UniversalityMetering extends LitElement {
             this.toggled = false;
             // umBtn.classList.remove('universality-metering-selector-um-toggled');
         } else {
+            const modes = ['text', 'paragraph', 'sentence', 'word'];
+
             this.selectors = html`
-                <div class="universality-metering-selector">Text</div>
-                <div class="universality-metering-selector">Paragraph</div>
-                <div class="universality-metering-selector">Sentence</div>
-                <div class="universality-metering-selector">Word</div>
+                ${
+                    modes.map((mode) => html`
+                        <div
+                            class="universality-metering-selector"
+                            @click=${ (e: Event) => this.setMode(mode) }
+                        >
+                            ${capitalize(mode)}
+                        </div>
+                    `)
+                }
             `;
             // umBtn.classList.add('universality-metering-selector-um-toggled');
             this.toggled = true;
@@ -104,3 +120,8 @@ class UniversalityMetering extends LitElement {
 
 
 customElements.define('universality-metering', UniversalityMetering);
+
+
+const capitalize = (str: string): string => {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
