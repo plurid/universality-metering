@@ -218,12 +218,3 @@
 
 // console.log(originalContent);
 // console.log(paragraphsContent);
-
-
-
-// Char
-let char = document.getElementById('char');
-
-let charContent = char.innerHTML;
-
-console.log(charContent.charCodeAt(0));
