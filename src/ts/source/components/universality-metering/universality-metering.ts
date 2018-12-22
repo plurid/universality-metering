@@ -10,6 +10,7 @@ class UniversalityMetering extends LitElement {
     private toggled: boolean;
     private selectors: TemplateResult;
     private mode: string;
+    private modeLetter: string;
     private siblings: Element[];
     private activeModes: Array<string>;
 
@@ -22,6 +23,7 @@ class UniversalityMetering extends LitElement {
         super();
         this.toggled = false;
         this.mode = '';
+        this.modeLetter = '';
         this.selectors = html``;
         this.siblings = getAllSiblings(this);
         this.activeModes = getActiveModes(this.siblings);
@@ -33,6 +35,7 @@ class UniversalityMetering extends LitElement {
 
     setMode(mode: string) {
         this.mode = mode;
+        this.modeLetter = this.mode[0];
         // console.log(this.mode);
         this.toggle();
     }
@@ -58,6 +61,8 @@ class UniversalityMetering extends LitElement {
                     `)
                 }
             `;
+            this.mode = '';
+            this.modeLetter = '';
             // umBtn.classList.add('universality-metering-selector-um-toggled');
             this.toggled = true;
         }
@@ -71,7 +76,7 @@ class UniversalityMetering extends LitElement {
                 <div class="universality-metering-selector universality-metering-selector-um"
                     @click=${ (e: Event) => this.toggle() }
                 >
-                    UM
+                    UM${this.modeLetter}
                 </div>
                 ${ this.selectors }
             </div>
