@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************************************************!*\
   !*** ./node_modules/@polymer/lit-element/lit-element.js ***!
   \**********************************************************/
-/*! exports provided: notEqual, UpdatingElement, customElement, property, query, queryAll, eventOptions, html, svg, LitElement */
+/*! exports provided: html, svg, LitElement, notEqual, UpdatingElement, customElement, property, query, queryAll, eventOptions */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
