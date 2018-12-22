@@ -40,9 +40,12 @@ class UniversalityMetering extends LitElement {
         if (mode === 'paragraph') {
             this.siblings.map(sib => {
                 if (sib.nodeName === 'P') {
-                    sib.innerHTML = '<universality-metering-p>'
-                                    + sib.innerHTML
-                                    + '</universality-metering-p>';
+                    const univMetP = document.createElement('universality-metering-p');
+                    sib.parentNode.insertBefore(univMetP, sib);
+                    univMetP.appendChild(sib);
+                    // sib.innerHTML = '<universality-metering-p>'
+                    //                 + sib.innerHTML
+                    //                 + '</universality-metering-p>';
                 }
             });
         }
