@@ -355,7 +355,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\n// to use some kind of data-um-id?\n// <um-text data-um-id=\"u7ngb413\">\n//      <um-paragraph data-um-id=\"039zzmn1\">\n//          <um-sentence data-um-id=\"k4j1kjma\">\n//              <um-word data-um-id=\"hj3nz21a\">If</um-word> <um-word data-um-id=\"ok31nk51\">one</um-word>\n//                   ...\n//          </um-sentence>\n//      </um-paragraph>\n//      <um-image data-um-id=\"65j1plka\"> <img ...> </um-image>\n//  </um-text>\n//\nconst UM = {\n    text: {\n        word: {\n            if: {},\n            one: {}\n        },\n        sentence: {},\n        paragraph: {}\n    },\n    image: {},\n    video: {},\n    iframe: {},\n    canvas: {}\n};\nconst capitalize = (str) => {\n    return str.charAt(0).toUpperCase() + str.slice(1);\n};\nconst getAllSiblings = (element) => {\n    const parent = element.parentElement;\n    const children = Array.from(parent.children);\n    return children.filter(child => child !== element);\n};\nconst textModes = ['text', 'fragment', 'paragraph', 'sentence', 'word'];\nconst checkModes = (element) => {\n    switch (element.nodeName) {\n        case 'P':\n            return textModes;\n        case 'IMG':\n            return 'image';\n        case 'VIDEO':\n            return 'video';\n        case 'CANVAS':\n        case 'IFRAME':\n            return 'other';\n        case 'DIV':\n            // console.log('DIV -- recursivity');\n            // console.log(element.children);\n            const arr = Array.from(element.children);\n            let a = arr.map(el => checkModes(el));\n            console.log(a);\n        default:\n            return false;\n    }\n};\nclass UniversalityMetering extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n        this.toggled = false;\n        this.mode = '';\n        this.selectors = lit_element_1.html ``;\n        this.siblings = getAllSiblings(this);\n        let activeModes = this.siblings.map(sib => checkModes(sib));\n    }\n    createRenderRoot() {\n        return this;\n    }\n    setMode(mode) {\n        this.mode = mode;\n        // console.log(this.mode);\n        this.toggle();\n    }\n    toggle() {\n        // const umBtn = this.querySelector('universality-metering-selector-um');\n        // console.log(umBtn);\n        if (this.toggled === true) {\n            this.selectors = lit_element_1.html ``;\n            this.toggled = false;\n            // umBtn.classList.remove('universality-metering-selector-um-toggled');\n        }\n        else {\n            // to be dinamically resolved depending on what the div with the\n            // universality-metering element contains\n            const modes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];\n            this.selectors = lit_element_1.html `\n                ${modes.map((mode) => lit_element_1.html `\n                        <div\n                            class=\"universality-metering-selector\"\n                            @click=${(e) => this.setMode(mode)}\n                        >\n                            ${capitalize(mode)}\n                        </div>\n                    `)}\n            `;\n            // umBtn.classList.add('universality-metering-selector-um-toggled');\n            this.toggled = true;\n        }\n        this.requestUpdate();\n    }\n    render() {\n        return lit_element_1.html `\n            <div class=\"universality-metering-selectors\">\n                <div class=\"universality-metering-selector universality-metering-selector-um\"\n                    @click=${(e) => this.toggle()}\n                >\n                    UM\n                </div>\n                ${this.selectors}\n            </div>\n        `;\n    }\n}\ncustomElements.define('universality-metering', UniversalityMetering);\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering/universality-metering.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\nconst strings_1 = __webpack_require__(/*! ../../utils/strings */ \"./src/ts/source/utils/strings.ts\");\nconst dom_1 = __webpack_require__(/*! ../../utils/dom */ \"./src/ts/source/utils/dom.ts\");\nconst app_1 = __webpack_require__(/*! ../../utils/app */ \"./src/ts/source/utils/app.ts\");\nclass UniversalityMetering extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n        this.toggled = false;\n        this.mode = '';\n        this.selectors = lit_element_1.html ``;\n        this.siblings = dom_1.getAllSiblings(this);\n        let activeModes = this.siblings.map(sib => app_1.checkModes(sib));\n    }\n    createRenderRoot() {\n        return this;\n    }\n    setMode(mode) {\n        this.mode = mode;\n        // console.log(this.mode);\n        this.toggle();\n    }\n    toggle() {\n        // const umBtn = this.querySelector('universality-metering-selector-um');\n        // console.log(umBtn);\n        if (this.toggled === true) {\n            this.selectors = lit_element_1.html ``;\n            this.toggled = false;\n            // umBtn.classList.remove('universality-metering-selector-um-toggled');\n        }\n        else {\n            // to be dinamically resolved depending on what the div with the\n            // universality-metering element contains\n            const modes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];\n            this.selectors = lit_element_1.html `\n                ${modes.map((mode) => lit_element_1.html `\n                        <div\n                            class=\"universality-metering-selector\"\n                            @click=${(e) => this.setMode(mode)}\n                        >\n                            ${strings_1.capitalize(mode)}\n                        </div>\n                    `)}\n            `;\n            // umBtn.classList.add('universality-metering-selector-um-toggled');\n            this.toggled = true;\n        }\n        this.requestUpdate();\n    }\n    render() {\n        return lit_element_1.html `\n            <div class=\"universality-metering-selectors\">\n                <div class=\"universality-metering-selector universality-metering-selector-um\"\n                    @click=${(e) => this.toggle()}\n                >\n                    UM\n                </div>\n                ${this.selectors}\n            </div>\n        `;\n    }\n}\ncustomElements.define('universality-metering', UniversalityMetering);\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering/universality-metering.ts?");
 
 /***/ }),
 
@@ -368,6 +368,42 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst 
 
 "use strict";
 eval("\n\n\n//# sourceURL=webpack:///./src/ts/source/core/core.ts?");
+
+/***/ }),
+
+/***/ "./src/ts/source/utils/app.ts":
+/*!************************************!*\
+  !*** ./src/ts/source/utils/app.ts ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.checkModes = (element) => {\n    const textModes = ['text', 'fragment', 'paragraph', 'sentence', 'word'];\n    switch (element.nodeName) {\n        case 'P':\n            return textModes;\n        case 'IMG':\n            return 'image';\n        case 'VIDEO':\n            return 'video';\n        case 'CANVAS':\n        case 'IFRAME':\n            return 'other';\n        case 'DIV':\n            // console.log('DIV -- recursivity');\n            // console.log(element.children);\n            const arr = Array.from(element.children);\n            let a = arr.map(el => exports.checkModes(el));\n            console.log(a);\n        default:\n            return false;\n    }\n};\n\n\n//# sourceURL=webpack:///./src/ts/source/utils/app.ts?");
+
+/***/ }),
+
+/***/ "./src/ts/source/utils/dom.ts":
+/*!************************************!*\
+  !*** ./src/ts/source/utils/dom.ts ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.getAllSiblings = (element) => {\n    const parent = element.parentElement;\n    const children = Array.from(parent.children);\n    return children.filter(child => child !== element);\n};\n\n\n//# sourceURL=webpack:///./src/ts/source/utils/dom.ts?");
+
+/***/ }),
+
+/***/ "./src/ts/source/utils/strings.ts":
+/*!****************************************!*\
+  !*** ./src/ts/source/utils/strings.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.capitalize = (str) => {\n    return str.charAt(0).toUpperCase() + str.slice(1);\n};\n\n\n//# sourceURL=webpack:///./src/ts/source/utils/strings.ts?");
 
 /***/ }),
 

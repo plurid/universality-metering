@@ -18,7 +18,9 @@ universality-metering {
   display: block;
   position: relative;
   height: 30px;
-  width: 100%; }
+  width: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400; }
 
 .universality-metering-selectors {
   position: absolute;
