@@ -207,3 +207,91 @@ input:checked + .universality-metering-grading-header-slider:before {
     border-right: 10px solid transparent;
     border-bottom: 10px solid hsl(0, 0%, 15%);
 }
+
+
+
+
+.universality-metering-grading-header-pluridimensional {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+
+// Pluridimensional Checkmark
+
+/* The container */
+.universality-metering-grading-header-pluridimensional-checkmark-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+.universality-metering-grading-header-pluridimensional-checkmark-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.universality-metering-grading-header-pluridimensional-checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: #ccc;
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+}
+
+// /* On mouse-over, add a grey background color */
+// .universality-metering-grading-header-pluridimensional-checkmark-container:hover input ~ .universality-metering-grading-header-pluridimensional-checkmark {
+//     background-color: #ccc;
+// }
+
+/* When the checkbox is checked, add a blue background */
+.universality-metering-grading-header-pluridimensional-checkmark-container input:checked ~ .universality-metering-grading-header-pluridimensional-checkmark:before {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    content: '';
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 7px;
+    background-color: hsl(0, 0%, 15%);
+    // box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,1);
+    // border: 2px solid #ccc;
+    // box-sizing: border-box;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.universality-metering-grading-header-pluridimensional-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.universality-metering-grading-header-pluridimensional-checkmark-container input:checked ~ .universality-metering-grading-header-pluridimensional-checkmark:after {
+    display: block;
+}
+
+// /* Style the checkmark/indicator */
+// .universality-metering-grading-header-pluridimensional-checkmark-container .universality-metering-grading-header-pluridimensional-checkmark:after {
+//     left: 9px;
+//     top: 5px;
+//     width: 5px;
+//     height: 10px;
+//     border: solid white;
+//     border-width: 0 3px 3px 0;
+//     transform: rotate(45deg);
+// }
