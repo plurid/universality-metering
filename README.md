@@ -31,7 +31,7 @@ Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Conten
 ## Reason
 
     Act only according to that maxim whereby you can, at the same time,
-    will that it should become a universal law.[*]
+    will that it should become a universal law.*
 
     * Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals.
     Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.
