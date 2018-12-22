@@ -3,7 +3,7 @@ import { TemplateResult } from 'lit-html';
 
 import { capitalize } from '../../utils/strings';
 import { getAllSiblings } from '../../utils/dom';
-import { checkModes } from '../../utils/app';
+import { getActiveModes } from '../../utils/app';
 
 
 class UniversalityMetering extends LitElement {
@@ -11,6 +11,7 @@ class UniversalityMetering extends LitElement {
     private selectors: TemplateResult;
     private mode: string;
     private siblings: Element[];
+    private activeModes: Array<string>;
 
     static get properties() {
         return {
@@ -22,10 +23,8 @@ class UniversalityMetering extends LitElement {
         this.toggled = false;
         this.mode = '';
         this.selectors = html``;
-
         this.siblings = getAllSiblings(this);
-
-        let activeModes = this.siblings.map(sib => checkModes(sib));
+        this.activeModes = getActiveModes(this.siblings);
     }
 
     createRenderRoot() {
@@ -47,13 +46,9 @@ class UniversalityMetering extends LitElement {
             this.toggled = false;
             // umBtn.classList.remove('universality-metering-selector-um-toggled');
         } else {
-            // to be dinamically resolved depending on what the div with the
-            // universality-metering element contains
-            const modes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
-
             this.selectors = html`
                 ${
-                    modes.map((mode) => html`
+                    this.activeModes.map((mode) => html`
                         <div
                             class="universality-metering-selector"
                             @click=${ (e: Event) => this.setMode(mode) }
