@@ -2,6 +2,7 @@ import { LitElement, html } from '@polymer/lit-element';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 
+
 class UniversalityMeteringP extends LitElement {
     static get properties() {
         return {
@@ -29,13 +30,14 @@ class UniversalityMeteringP extends LitElement {
             grading.style.display = 'block';
         });
 
-        p.addEventListener('mouseleave', () => {
-            p.classList.remove('p-hover-universality-metering');
-            grading.style.display = 'none';
-        });
+        p.addEventListener('mouseleave', (event: MouseEvent) => {
+            const leftGrading = checkLeftGrading(event.relatedTarget);
 
-        console.log(p);
-        console.log(grading);
+            if (leftGrading) {
+                p.classList.remove('p-hover-universality-metering');
+                grading.style.display = 'none';
+            }
+        });
     }
 
     render() {
@@ -50,3 +52,18 @@ class UniversalityMeteringP extends LitElement {
 
 
 customElements.define('universality-metering-p', UniversalityMeteringP);
+
+
+const checkLeftGrading = (element: any): boolean => {
+    console.log(element);
+
+    if (element.classList.contains('universality-metering-grading')) {
+        return false
+    }
+
+    while (element.parentElement) {
+        return checkLeftGrading(element.parentElement);
+    }
+
+    return true
+}
