@@ -1,23 +1,51 @@
-export const checkModes = (element: Element): string | Array<string> | boolean => {
+import { flattenDeep } from './arrays';
+import { getNodeNames } from './dom';
+
+
+
+// const modes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
+export const getActiveModes = (siblings: Element[]): Array<string> => {
     const textModes = ['text', 'fragment', 'paragraph', 'sentence', 'word'];
 
-    switch (element.nodeName) {
-        case 'P':
-            return textModes;
-        case 'IMG':
-            return 'image';
-        case 'VIDEO':
-            return 'video';
-        case 'CANVAS':
-        case 'IFRAME':
-            return 'other';
-        case 'DIV':
-            // console.log('DIV -- recursivity');
-            // console.log(element.children);
-            const arr = Array.from(element.children);
-            let a = arr.map(el => checkModes(el));
-            console.log(a);
-        default:
-            return false;
-    }
+    const nodeNames = new Set( flattenDeep(siblings.map(sib => getNodeNames(sib))) );
+
+    const activeModesUnord: Array<number> = [];
+
+    [...nodeNames].map(nodeName => {
+        switch (nodeName) {
+            case 'P':
+                activeModesUnord.push(2);
+                break;
+            case 'IMG':
+                activeModesUnord.push(1);
+                break;
+            case 'VIDEO':
+            case 'CANVAS':
+            case 'IFRAME':
+                activeModesUnord.push(0);
+                break;
+            default:
+                return false;
+        }
+    });
+
+    const val = new Set(activeModesUnord.sort());
+    const activeModes: Array<string> = [];
+
+    [...val].map(el => {
+        switch (el) {
+            case 0:
+                activeModes.push('other');
+                break;
+            case 1:
+                activeModes.push('image');
+                break;
+            case 2:
+                activeModes.push(...textModes);
+                break;
+        }
+
+    });
+
+    return activeModes;
 }
