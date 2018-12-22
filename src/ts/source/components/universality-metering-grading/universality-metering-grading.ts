@@ -69,8 +69,10 @@ class UniversalityMeteringGrading extends LitElement {
                         </div>
                     </div>
                     <div class="universality-metering-grading-header-pluridimensional">
-                        <input type="checkbox">
-                        <label>Pluridimensional</label>
+                        <label class="universality-metering-grading-header-pluridimensional-checkmark-container">Pluridimensional
+                            <input type="checkbox">
+                            <span class="universality-metering-grading-header-pluridimensional-checkmark"></span>
+                        </label>
                     </div>
 
                     <div class="universality-metering-grading-header-kind">
@@ -83,6 +85,8 @@ class UniversalityMeteringGrading extends LitElement {
                                 <p>Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.*</p>
 
                                 <p>* Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals. Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.</p>
+
+                                <p>To able to stand as truth, a text, image, or other media should at least aspire to universality.</p>
 
                                 <p><a href="https://github.com/plurid/universality-metering" target="_blank">About Universality Metering</a></p>
                             </div>
