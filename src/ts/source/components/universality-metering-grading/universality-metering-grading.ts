@@ -74,7 +74,19 @@ class UniversalityMeteringGrading extends LitElement {
                     </div>
 
                     <div class="universality-metering-grading-header-kind">
-                        ${capitalize(this.mode)} Universality
+                        <div class="universality-metering-grading-header-kind-text">
+                            ${capitalize(this.mode)} Universality
+                        </div>
+                        <div class="universality-metering-grading-header-kind-question-mark">
+                            ?
+                            <div class="universality-metering-grading-header-kind-question-mark-text">
+                                <p>Act only according to that maxim whereby you can, at the same time, will that it should become a universal law.*</p>
+
+                                <p>* Kant, Immanuel (11993 HE) [11785 HE]. Grounding for the Metaphysics of Morals. Translated by Ellington, James W. (3rd ed.). Hackett. p. 30. ISBN 0-87220-166-X.</p>
+
+                                <p><a href="https://github.com/plurid/universality-metering" target="_blank">About Universality Metering</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="universality-metering-grading-area">
