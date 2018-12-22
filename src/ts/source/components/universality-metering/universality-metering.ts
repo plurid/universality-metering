@@ -36,7 +36,18 @@ class UniversalityMetering extends LitElement {
     setMode(mode: string) {
         this.mode = mode;
         this.modeLetter = this.mode[0];
-        // console.log(this.mode);
+
+        if (mode === 'paragraph') {
+            this.siblings.map(sib => {
+                if (sib.nodeName === 'P') {
+                    sib.innerHTML = '<universality-metering-p>'
+                                    + sib.innerHTML
+                                    + '</universality-metering-p>';
+                }
+            });
+        }
+        // console.log(this.siblings);
+
         this.toggle();
     }
 
