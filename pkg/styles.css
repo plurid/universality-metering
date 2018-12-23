@@ -63,34 +63,6 @@ universality-metering {
 .universality-metering-selector-um-toggled {
   background-color: #bfbfbf; }
 
-universality-metering-grading {
-  position: absolute;
-  display: none;
-  left: 0;
-  top: 100px;
-  width: 600px;
-  z-index: 1;
-  background-color: #e6e6e6;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); }
-
-.universality-metering-grading {
-  height: 100%;
-  width: 100%; }
-
-.universality-metering-grading-header {
-  font-size: 0.9rem;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-  text-align: center;
-  width: 90%;
-  justify-items: center;
-  margin: 0 auto;
-  align-items: center;
-  height: 60px;
-  align-self: center; }
-
 .universality-metering-grading-area {
   display: grid;
   justify-content: center;
@@ -126,61 +98,68 @@ universality-metering-grading {
 .universality-metering-grading-button:hover {
   background-color: white; }
 
-.universality-metering-grading-header-switch {
+/*
+    universality-metering-grading-header
+*/
+/*
+    Checkmark for Pluridimensional
+*/
+/* The container */
+.universality-metering-grading-header-pluridimensional-checkmark-container {
+  display: block;
   position: relative;
-  display: inline-block;
-  width: 36px;
-  justify-self: center;
-  height: 20px;
-  margin: 0 5px; }
-
-.universality-metering-grading-header-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0; }
-
-.universality-metering-grading-header-slider {
-  position: absolute;
+  padding-left: 25px;
   cursor: pointer;
-  box-shadow: inset 0px 0px 5px 0px black;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s; }
-
-.universality-metering-grading-header-slider:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 2px;
-  bottom: 3px;
-  background-color: #1a1a1a;
-  transition: .4s; }
-
-input:checked + .universality-metering-grading-header-slider:before {
-  -webkit-transform: translateX(18px);
-          transform: translateX(18px); }
-
-.universality-metering-grading-header-slider.universality-metering-grading-header-slider-round {
-  border-radius: 10px; }
-
-.universality-metering-grading-header-slider.universality-metering-grading-header-slider-round:before {
-  border-radius: 50%; }
-
-.universality-metering-grading-header-switch-group {
-  display: grid;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
 
+/* Hide the browser's default checkbox */
+.universality-metering-grading-header-pluridimensional-checkmark-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+/* Create a custom checkbox */
+.universality-metering-grading-header-pluridimensional-checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  box-shadow: inset 0px 0px 5px 0px black; }
+
+/* When the checkbox is checked, add a blue background */
+.universality-metering-grading-header-pluridimensional-checkmark-container input:checked ~ .universality-metering-grading-header-pluridimensional-checkmark:before {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  content: '';
+  top: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 7px;
+  background-color: #262626; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.universality-metering-grading-header-pluridimensional-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.universality-metering-grading-header-pluridimensional-checkmark-container input:checked ~ .universality-metering-grading-header-pluridimensional-checkmark:after {
+  display: block; }
+
+/*
+    the Kind of Universality Metering with text box on hover
+*/
 .universality-metering-grading-header-kind {
   display: flex; }
 
@@ -253,64 +232,100 @@ input:checked + .universality-metering-grading-header-slider:before {
   border-right: 10px solid transparent;
   border-bottom: 10px solid #262626; }
 
+/*
+    Pluridimensional
+*/
 .universality-metering-grading-header-pluridimensional {
   display: grid;
   justify-content: center;
   align-items: center;
   height: 20px; }
 
-/* The container */
-.universality-metering-grading-header-pluridimensional-checkmark-container {
-  display: block;
+/*
+    Switch for Numbers and Types
+*/
+.universality-metering-grading-header-switch {
   position: relative;
-  padding-left: 25px;
+  display: inline-block;
+  width: 36px;
+  justify-self: center;
+  height: 20px;
+  margin: 0 5px; }
+
+.universality-metering-grading-header-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+.universality-metering-grading-header-slider {
+  position: absolute;
   cursor: pointer;
+  box-shadow: inset 0px 0px 5px 0px black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s; }
+
+.universality-metering-grading-header-slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 3px;
+  background-color: #1a1a1a;
+  transition: .4s; }
+
+input:checked + .universality-metering-grading-header-slider:before {
+  -webkit-transform: translateX(18px);
+          transform: translateX(18px); }
+
+.universality-metering-grading-header-slider.universality-metering-grading-header-slider-round {
+  border-radius: 10px; }
+
+.universality-metering-grading-header-slider.universality-metering-grading-header-slider-round:before {
+  border-radius: 50%; }
+
+.universality-metering-grading-header-switch-group {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
 
-/* Hide the browser's default checkbox */
-.universality-metering-grading-header-pluridimensional-checkmark-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0; }
+.universality-metering-grading-header {
+  font-size: 0.9rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+  width: 90%;
+  justify-items: center;
+  margin: 0 auto;
+  align-items: center;
+  height: 60px;
+  align-self: center; }
 
-/* Create a custom checkbox */
-.universality-metering-grading-header-pluridimensional-checkmark {
+universality-metering-grading {
   position: absolute;
-  top: -2px;
+  display: none;
   left: 0;
-  border-radius: 10px;
-  height: 20px;
-  width: 20px;
-  background-color: #ccc;
-  box-shadow: inset 0px 0px 5px 0px black; }
+  top: 100px;
+  width: 600px;
+  z-index: 1;
+  background-color: #e6e6e6;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75); }
 
-/* When the checkbox is checked, add a blue background */
-.universality-metering-grading-header-pluridimensional-checkmark-container input:checked ~ .universality-metering-grading-header-pluridimensional-checkmark:before {
-  width: 14px;
-  height: 14px;
-  position: absolute;
-  content: '';
-  top: 3px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-radius: 7px;
-  background-color: #262626; }
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.universality-metering-grading-header-pluridimensional-checkmark:after {
-  content: "";
-  position: absolute;
-  display: none; }
-
-/* Show the checkmark when checked */
-.universality-metering-grading-header-pluridimensional-checkmark-container input:checked ~ .universality-metering-grading-header-pluridimensional-checkmark:after {
-  display: block; }
+.universality-metering-grading {
+  height: 100%;
+  width: 100%; }
 
 universality-metering-p {
   position: relative;
