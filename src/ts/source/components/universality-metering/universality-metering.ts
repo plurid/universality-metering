@@ -1,9 +1,9 @@
 import { LitElement, html } from '@polymer/lit-element';
 import { TemplateResult } from 'lit-html';
 
-import { capitalize } from '../../utils/strings';
 import { getAllSiblings } from '../../utils/dom';
 import { getActiveModes } from '../../utils/app';
+
 
 
 class UniversalityMetering extends LitElement {
@@ -33,6 +33,7 @@ class UniversalityMetering extends LitElement {
         return this;
     }
 
+
     setMode(mode: string) {
         this.mode = mode;
         this.modeLetter = this.mode[0];
@@ -50,14 +51,21 @@ class UniversalityMetering extends LitElement {
         this.toggle();
     }
 
+
+    clearMode() {
+        // console.log(this.mode);
+        this.mode = '';
+        this.modeLetter = '';
+    }
+
+
     toggle() {
-        // const umBtn = this.querySelector('universality-metering-selector-um');
-        // console.log(umBtn);
+        const umBtn = this.getElementsByClassName('universality-metering-selector-um')[0];
 
         if (this.toggled === true) {
             this.selectors = html``;
             this.toggled = false;
-            // umBtn.classList.remove('universality-metering-selector-um-toggled');
+            umBtn.classList.remove('universality-metering-selector-um-toggled');
         } else {
             this.selectors = html`
                 ${
@@ -66,19 +74,22 @@ class UniversalityMetering extends LitElement {
                             class="universality-metering-selector"
                             @click=${ (e: Event) => this.setMode(mode) }
                         >
-                            ${capitalize(mode)}
+                            <span class="universality-metering-selector-kind">
+                                ${mode}
+                            </span>
                         </div>
                     `)
                 }
             `;
-            this.mode = '';
-            this.modeLetter = '';
-            // umBtn.classList.add('universality-metering-selector-um-toggled');
+
+            umBtn.classList.add('universality-metering-selector-um-toggled');
+            this.clearMode();
             this.toggled = true;
         }
 
         this.requestUpdate();
     }
+
 
     render() {
         return html`
