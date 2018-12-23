@@ -37,6 +37,7 @@ class UniversalityMetering extends LitElement {
     setMode(mode: string) {
         this.mode = mode;
         this.modeLetter = this.mode[0];
+        this.siblings = getAllSiblings(this);
 
         if (mode === 'paragraph') {
             this.siblings.map(sib => {
@@ -54,6 +55,19 @@ class UniversalityMetering extends LitElement {
 
     clearMode() {
         // console.log(this.mode);
+
+        if (this.mode === 'paragraph') {
+            this.siblings = getAllSiblings(this);
+            // console.log(this.siblings);
+            this.siblings.map(sib => {
+                if (sib.nodeName === 'UNIVERSALITY-METERING-P') {
+                    const p = sib.getElementsByTagName('p')[0];
+                    sib.parentNode.insertBefore(p, sib);
+                    sib.parentNode.removeChild(sib);
+                }
+            });
+        }
+
         this.mode = '';
         this.modeLetter = '';
     }
