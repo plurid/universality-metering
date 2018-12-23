@@ -8,7 +8,9 @@ import { getNodeNames } from './dom';
  *                'text', 'fragment', 'paragraph', 'sentence', 'word'];
  *
  * 'video' to be conflated with 'other'
- * 'fragment' may be developed at a later date
+ * 'fragment' may be developed at a later date or maybe it's not needed
+ * for fragmentational selection, select 'word' and hold shift and click
+ * on words for multiple selection
  *
  *
  * TEXT - 2
