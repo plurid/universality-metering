@@ -3,9 +3,21 @@ import { getNodeNames } from './dom';
 
 
 
-// const modes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
+/**
+ * const modes = ['other', 'video', 'image',
+ *                'text', 'fragment', 'paragraph', 'sentence', 'word'];
+ *
+ * 'video' to be conflated with 'other'
+ * 'fragment' may be developed at a later date
+ *
+ *
+ * TEXT - 2
+ * IMAGE - 1
+ * VIDEO/CANVAS - 0
+ */
+
 export const getActiveModes = (siblings: Element[]): Array<string> => {
-    const textModes = ['text', 'fragment', 'paragraph', 'sentence', 'word'];
+    const textModes = ['text', 'paragraph', 'sentence', 'word'];
 
     const nodeNames = new Set( flattenDeep(siblings.map(sib => getNodeNames(sib))) );
 
@@ -44,7 +56,6 @@ export const getActiveModes = (siblings: Element[]): Array<string> => {
                 activeModes.push(...textModes);
                 break;
         }
-
     });
 
     return activeModes;
