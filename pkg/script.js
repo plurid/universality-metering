@@ -355,7 +355,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webpack_require__(/*! ./universality-metering/universality-metering */ \"./src/ts/source/components/universality-metering/universality-metering.ts\");\n__webpack_require__(/*! ./universality-metering-grading/universality-metering-grading */ \"./src/ts/source/components/universality-metering-grading/universality-metering-grading.ts\");\n__webpack_require__(/*! ./universality-metering-p/universality-metering-p */ \"./src/ts/source/components/universality-metering-p/universality-metering-p.ts\");\n\n\n//# sourceURL=webpack:///./src/ts/source/components/components.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__webpack_require__(/*! ./universality-metering/universality-metering */ \"./src/ts/source/components/universality-metering/universality-metering.ts\");\n__webpack_require__(/*! ./universality-metering-grading/universality-metering-grading */ \"./src/ts/source/components/universality-metering-grading/universality-metering-grading.ts\");\n__webpack_require__(/*! ./universality-metering-p/universality-metering-p */ \"./src/ts/source/components/universality-metering-p/universality-metering-p.ts\");\n__webpack_require__(/*! ./universality-metering-s/universality-metering-s */ \"./src/ts/source/components/universality-metering-s/universality-metering-s.ts\");\n\n\n//# sourceURL=webpack:///./src/ts/source/components/components.ts?");
 
 /***/ }),
 
@@ -379,7 +379,19 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\nconst unsafe_html_1 = __webpack_require__(/*! lit-html/directives/unsafe-html */ \"./node_modules/lit-html/directives/unsafe-html.js\");\nclass UniversalityMeteringP extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n    }\n    createRenderRoot() {\n        return this;\n    }\n    firstUpdated() {\n    }\n    render() {\n        return lit_element_1.html `\n            ${unsafe_html_1.unsafeHTML(this.innerHTML)}\n\n            <universality-metering-grading mode=\"paragraph\">\n            </universality-metering-grading>\n        `;\n    }\n}\ncustomElements.define('universality-metering-p', UniversalityMeteringP);\nconst checkLeftGrading = (element) => {\n    // console.log(element);\n    if (element.classList.contains('universality-metering-grading')) {\n        return false;\n    }\n    while (element.parentElement) {\n        return checkLeftGrading(element.parentElement);\n    }\n    return true;\n};\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering-p/universality-metering-p.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\nconst unsafe_html_1 = __webpack_require__(/*! lit-html/directives/unsafe-html */ \"./node_modules/lit-html/directives/unsafe-html.js\");\nclass UniversalityMeteringP extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n    }\n    createRenderRoot() {\n        return this;\n    }\n    firstUpdated() {\n    }\n    render() {\n        return lit_element_1.html `\n            ${unsafe_html_1.unsafeHTML(this.innerHTML)}\n\n            <universality-metering-grading mode=\"paragraph\">\n            </universality-metering-grading>\n        `;\n    }\n}\ncustomElements.define('universality-metering-p', UniversalityMeteringP);\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering-p/universality-metering-p.ts?");
+
+/***/ }),
+
+/***/ "./src/ts/source/components/universality-metering-s/universality-metering-s.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/ts/source/components/universality-metering-s/universality-metering-s.ts ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst lit_element_1 = __webpack_require__(/*! @polymer/lit-element */ \"./node_modules/@polymer/lit-element/lit-element.js\");\nconst unsafe_html_1 = __webpack_require__(/*! lit-html/directives/unsafe-html */ \"./node_modules/lit-html/directives/unsafe-html.js\");\nclass UniversalityMeteringS extends lit_element_1.LitElement {\n    static get properties() {\n        return {};\n    }\n    constructor() {\n        super();\n    }\n    createRenderRoot() {\n        return this;\n    }\n    firstUpdated() {\n    }\n    render() {\n        return lit_element_1.html `\n            ${unsafe_html_1.unsafeHTML(this.innerHTML)}\n\n            <universality-metering-grading mode=\"sentence\">\n            </universality-metering-grading>\n        `;\n    }\n}\ncustomElements.define('universality-metering-s', UniversalityMeteringS);\n\n\n//# sourceURL=webpack:///./src/ts/source/components/universality-metering-s/universality-metering-s.ts?");
 
 /***/ }),
 

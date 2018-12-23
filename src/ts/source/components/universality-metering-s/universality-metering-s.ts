@@ -3,7 +3,7 @@ import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 
 
-class UniversalityMeteringP extends LitElement {
+class UniversalityMeteringS extends LitElement {
     static get properties() {
         return {
         };
@@ -24,11 +24,11 @@ class UniversalityMeteringP extends LitElement {
         return html`
             ${ unsafeHTML(this.innerHTML) }
 
-            <universality-metering-grading mode="paragraph">
+            <universality-metering-grading mode="sentence">
             </universality-metering-grading>
         `;
     }
 }
 
 
-customElements.define('universality-metering-p', UniversalityMeteringP);
+customElements.define('universality-metering-s', UniversalityMeteringS);

@@ -339,8 +339,15 @@ universality-metering-p:hover universality-metering-grading {
 
 universality-metering-p:hover > p {
   cursor: pointer;
-  background-color: #e6e6e6; }
+  background-color: #bfbfbf; }
 
 universality-metering-s {
+  position: relative;
   display: inline; }
+
+universality-metering-s:hover {
+  background-color: #bfbfbf;
+  cursor: pointer; }
+  universality-metering-s:hover universality-metering-grading {
+    display: block; }
 
