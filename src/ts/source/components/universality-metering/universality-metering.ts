@@ -43,13 +43,9 @@ class UniversalityMetering extends LitElement {
                     const univMetP = document.createElement('universality-metering-p');
                     sib.parentNode.insertBefore(univMetP, sib);
                     univMetP.appendChild(sib);
-                    // sib.innerHTML = '<universality-metering-p>'
-                    //                 + sib.innerHTML
-                    //                 + '</universality-metering-p>';
                 }
             });
         }
-        // console.log(this.siblings);
 
         this.toggle();
     }

@@ -4,7 +4,13 @@ universality-metering-p {
 }
 
 
-.p-hover-universality-metering {
-    cursor: pointer;
-    background-color: hsl(0, 0%, 90%);
+universality-metering-p:hover {
+    universality-metering-grading {
+        display: block;
+    }
+
+    universality-metering-p > p {
+        cursor: pointer;
+        background-color: hsl(0, 0%, 90%);
+    }
 }
