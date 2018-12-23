@@ -1,3 +1,14 @@
 universality-metering-s {
+    position: relative;
     display: inline;
+}
+
+
+universality-metering-s:hover {
+    background-color: hsl(0, 0%, 75%);
+    cursor: pointer;
+
+    universality-metering-grading {
+        display: block;
+    }
 }
