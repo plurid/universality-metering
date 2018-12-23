@@ -39,6 +39,28 @@ class UniversalityMetering extends LitElement {
         this.modeLetter = this.mode[0];
         this.siblings = getAllSiblings(this);
 
+
+        if (mode === 'sentence') {
+            this.siblings.map(sib => {
+                if (sib.nodeName === 'P') {
+                    const sentenceRegex = new RegExp('[^\.!\?]+[\.!\?]+', 'g');
+                    const sibText = sib.innerHTML;
+                    const sentences = sibText.match(sentenceRegex);
+                    console.log(sentences);
+                    const univSentences = document.createElement('p');
+
+                    [...sentences].map(sentence => {
+                        const univMetS = document.createElement('universality-metering-s');
+                        univMetS.innerHTML = sentence;
+                        univSentences.appendChild(univMetS);
+                    });
+
+                    sib.parentNode.insertBefore(univSentences, sib);
+                    sib.parentNode.removeChild(sib);
+                }
+            });
+        }
+
         if (mode === 'paragraph') {
             this.siblings.map(sib => {
                 if (sib.nodeName === 'P') {
