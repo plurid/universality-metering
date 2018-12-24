@@ -1,11 +1,13 @@
 import { LitElement, html } from '@polymer/lit-element';
 
 import { capitalize } from '../../utils/strings';
+import { TemplateResult } from 'lit-html';
 
 
 
 class UniversalityMeteringGrading extends LitElement {
     private _mode: string;
+    private gradingArea: TemplateResult;
 
     static get properties() {
         return {
@@ -15,6 +17,13 @@ class UniversalityMeteringGrading extends LitElement {
     constructor() {
         super();
         this.mode = this.getAttribute('mode');
+
+        this.gradingArea = html`
+            <div class="universality-metering-grading-area-crisp-slider-container">
+                <input type="range" min="-1000" max="1000" value="352" class="universality-metering-grading-area-crisp-slider">
+                <span class="universality-metering-grading-area-crisp-slider-value">352</span>
+            </div>
+        `;
     }
 
     createRenderRoot() {
@@ -40,7 +49,7 @@ class UniversalityMeteringGrading extends LitElement {
 
                             <div>
                                 <label class="universality-metering-grading-header-switch">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox">
                                     <span class="universality-metering-grading-header-slider universality-metering-grading-header-slider-round"></span>
                                 </label>
                             </div>
@@ -58,7 +67,7 @@ class UniversalityMeteringGrading extends LitElement {
 
                             <div>
                                 <label class="universality-metering-grading-header-switch">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox">
                                     <span class="universality-metering-grading-header-slider universality-metering-grading-header-slider-round"></span>
                                 </label>
                             </div>
@@ -94,7 +103,7 @@ class UniversalityMeteringGrading extends LitElement {
                     </div>
                 </div>
                 <div class="universality-metering-grading-area">
-                    <input type="range" min="-1000" max="1000">
+                    ${ this.gradingArea }
                 </div>
                 <div class="universality-metering-grading-buttons">
                     <button class="universality-metering-grading-button">
