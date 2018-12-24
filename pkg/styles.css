@@ -319,8 +319,8 @@ input:checked + .universality-metering-grading-header-slider:before {
 universality-metering-grading {
   position: absolute;
   display: none;
-  left: 0;
   top: 100px;
+  left: 0;
   width: 600px;
   z-index: 1;
   background-color: #e6e6e6;
