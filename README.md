@@ -16,7 +16,7 @@
 
 # Universality Metering
 
-Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content
+User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content
 
 
 + [Reason](#reason)
