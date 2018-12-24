@@ -46,15 +46,15 @@ class UniversalityMetering extends LitElement {
                     const sentenceRegex = new RegExp('[^\.!\?]+[\.!\?]+', 'g');
                     const sibText = sib.innerHTML;
                     const sentences = sibText.match(sentenceRegex);
-                    console.log(sentences);
                     const univSentences = document.createElement('p');
 
                     [...sentences].map(sentence => {
                         const univMetS = document.createElement('universality-metering-s');
-                        univMetS.innerHTML = sentence;
+                        univMetS.innerHTML = sentence.trim();
                         univSentences.appendChild(univMetS);
                     });
 
+                    // console.log(sentences);
                     sib.parentNode.insertBefore(univSentences, sib);
                     sib.parentNode.removeChild(sib);
                 }

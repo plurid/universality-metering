@@ -7,8 +7,10 @@
 universality-metering-grading {
     position: absolute;
     display: none;
-    left: 0;
+    // top/left to be dynamic
     top: 100px;
+    left: 0;
+
     width: 600px;
     z-index: 1;
     background-color: hsl(0, 0%, 90%);
