@@ -1,44 +1,28 @@
-import { LitElement, html } from '@polymer/lit-element';
-
-import { capitalize } from '../../utils/strings';
-import { TemplateResult } from 'lit-html';
+import { Component, Prop } from '@stencil/core';
 
 
 
-class UniversalityMeteringGrading extends LitElement {
-    private _mode: string;
-    private gradingArea: TemplateResult;
+@Component({
+    tag: 'universality-metering-grading',
+    styleUrl: 'universality-metering-grading.scss',
+    shadow: true
+})
+export class UniversalityMeteringGrading {
+    @Prop() mode: string;
 
-    static get properties() {
-        return {
-        };
-    }
+    private gradingArea: any = (
+        <div class="universality-metering-grading-area-crisp-slider-container">
+            <input type="range" min="-1000" max="1000" value="352" class="universality-metering-grading-area-crisp-slider" />
+            <span class="universality-metering-grading-area-crisp-slider-value">352</span>
+        </div>
+    );
 
-    constructor() {
-        super();
-        this.mode = this.getAttribute('mode');
-
-        this.gradingArea = html`
-            <div class="universality-metering-grading-area-crisp-slider-container">
-                <input type="range" min="-1000" max="1000" value="352" class="universality-metering-grading-area-crisp-slider">
-                <span class="universality-metering-grading-area-crisp-slider-value">352</span>
-            </div>
-        `;
-    }
-
-    createRenderRoot() {
-        return this;
-    }
-
-    get mode(): string {
-        return this._mode;
-    }
-    set mode(newMode: string) {
-        this._mode = newMode;
+    capitalize = (str: string) => {
+        return str;
     }
 
     render() {
-        return html`
+        return (
             <div class="universality-metering-grading">
                 <div class="universality-metering-grading-header">
                     <div class="universality-metering-grading-header-numbers">
@@ -49,8 +33,8 @@ class UniversalityMeteringGrading extends LitElement {
 
                             <div>
                                 <label class="universality-metering-grading-header-switch">
-                                    <input type="checkbox">
-                                    <span class="universality-metering-grading-header-slider universality-metering-grading-header-slider-round"></span>
+                                    <input type="checkbox" />
+                                    <span class="universality-metering-grading-header-slider universality-metering-grading-header-slider-round" />
                                 </label>
                             </div>
 
@@ -67,8 +51,8 @@ class UniversalityMeteringGrading extends LitElement {
 
                             <div>
                                 <label class="universality-metering-grading-header-switch">
-                                    <input type="checkbox">
-                                    <span class="universality-metering-grading-header-slider universality-metering-grading-header-slider-round"></span>
+                                    <input type="checkbox" />
+                                    <span class="universality-metering-grading-header-slider universality-metering-grading-header-slider-round" />
                                 </label>
                             </div>
 
@@ -79,14 +63,14 @@ class UniversalityMeteringGrading extends LitElement {
                     </div>
                     <div class="universality-metering-grading-header-pluridimensional">
                         <label class="universality-metering-grading-header-pluridimensional-checkmark-container">Pluridimensional
-                            <input type="checkbox">
-                            <span class="universality-metering-grading-header-pluridimensional-checkmark"></span>
+                            <input type="checkbox" />
+                            <span class="universality-metering-grading-header-pluridimensional-checkmark" />
                         </label>
                     </div>
 
                     <div class="universality-metering-grading-header-kind">
                         <div class="universality-metering-grading-header-kind-text">
-                            ${capitalize(this.mode)} Universality
+                            ${this.capitalize(this.mode)} Universality
                         </div>
                         <div class="universality-metering-grading-header-kind-question-mark">
                             ?
@@ -120,9 +104,6 @@ class UniversalityMeteringGrading extends LitElement {
                     </button>
                 </div>
             </div>
-        `;
+        );
     }
 }
-
-
-customElements.define('universality-metering-grading', UniversalityMeteringGrading);
