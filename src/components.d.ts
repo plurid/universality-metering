@@ -13,10 +13,10 @@ import '@stencil/core';
 export namespace Components {
 
   interface UniversalityMeteringGrading {
-    'mode': string;
+    'selector': string;
   }
   interface UniversalityMeteringGradingAttributes extends StencilHTMLAttributes {
-    'mode'?: string;
+    'selector'?: string;
   }
 
   interface UniversalityMeteringP {}

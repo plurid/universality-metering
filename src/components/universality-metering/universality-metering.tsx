@@ -89,36 +89,38 @@ export class UniversalityMetering {
     render() {
         return (
             <div class="universality-metering-container">
-            <div class="universality-metering-selectors">
-                <div
-                    class={`
-                        universality-metering-selector
-                        universality-metering-selector-um
-                        ${this.toggledSelectors ? 'universality-metering-selector-um-toggled': ''}
-                    `}
-                    onClick={this.toggleSelectors}
-                >
-                    UM{this.activeSelectorLetter}
+                <div class="universality-metering-selectors">
+                    <div
+                        class={`
+                            universality-metering-selector
+                            universality-metering-selector-um
+                            ${this.toggledSelectors ? 'universality-metering-selector-um-toggled': ''}
+                        `}
+                        onClick={this.toggleSelectors}
+                    >
+                        UM{this.activeSelectorLetter}
+                    </div>
+
+                    {this.toggledSelectors &&
+                        (<div class="universality-metering-selectors-group">
+                            { this.activeSelectors.map((selector: string) => {
+                                    return (
+                                        <div
+                                            class="universality-metering-selector"
+                                            onClick={this.setActiveSelector.bind(this, selector)}
+                                        >
+                                            <span class="universality-metering-selector-kind">
+                                                {selector}
+                                            </span>
+                                        </div>
+                                    );
+                                }
+                            )}
+                        </div>)
+                    }
                 </div>
 
-                {this.toggledSelectors &&
-                    (<div class="universality-metering-selectors-group">
-                        { this.activeSelectors.map((selector: string) => {
-                                return (
-                                    <div
-                                        class="universality-metering-selector"
-                                        onClick={this.setActiveSelector.bind(this, selector)}
-                                    >
-                                        <span class="universality-metering-selector-kind">
-                                            {selector}
-                                        </span>
-                                    </div>
-                                );
-                            }
-                        )}
-                    </div>)
-                }
-            </div>
+                <universality-metering-grading selector="paragraph"></universality-metering-grading>
             </div>
         );
     }
