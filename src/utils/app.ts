@@ -17,48 +17,45 @@ import { getNodeNames } from './dom';
  * IMAGE - 1
  * VIDEO/CANVAS - 0
  */
-
-export const getActiveModes = (siblings: Element[]): Array<string> => {
-    const textModes = ['text', 'paragraph', 'sentence', 'word'];
-
+export const getActiveSelectors = (siblings: Element[]): string[] => {
+    const textSelectors = ['text', 'paragraph', 'sentence', 'word'];
     const nodeNames = new Set( flattenDeep(siblings.map(sib => getNodeNames(sib))) );
-
-    const activeModesUnord: Array<number> = [];
+    const activeSelectorsUnord: number[] = [];
+    const activeSelectors: string[] = [];
 
     [...nodeNames].map(nodeName => {
         switch (nodeName) {
             case 'P':
-                activeModesUnord.push(2);
+                activeSelectorsUnord.push(2);
                 break;
             case 'IMG':
-                activeModesUnord.push(1);
+                activeSelectorsUnord.push(1);
                 break;
             case 'VIDEO':
             case 'CANVAS':
             case 'IFRAME':
-                activeModesUnord.push(0);
+                activeSelectorsUnord.push(0);
                 break;
             default:
                 return false;
         }
     });
 
-    const val = new Set(activeModesUnord.sort());
-    const activeModes: Array<string> = [];
+    const val = new Set(activeSelectorsUnord.sort());
 
     [...val].map(el => {
         switch (el) {
             case 0:
-                activeModes.push('other');
+                activeSelectors.push('other');
                 break;
             case 1:
-                activeModes.push('image');
+                activeSelectors.push('image');
                 break;
             case 2:
-                activeModes.push(...textModes);
+                activeSelectors.push(...textSelectors);
                 break;
         }
     });
 
-    return activeModes;
+    return activeSelectors;
 }

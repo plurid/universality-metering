@@ -1,4 +1,7 @@
-import { Component, State } from '@stencil/core';
+import { Component, State, Element } from '@stencil/core';
+
+import { getAllSiblings } from '../../utils/dom';
+import { getActiveSelectors } from '../../utils/app';
 
 
 
@@ -8,20 +11,25 @@ import { Component, State } from '@stencil/core';
     shadow: true
 })
 export class UniversalityMetering {
-
-    private activeSelectors = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
+    @Element() element: HTMLElement;
 
     @State() toggledSelectors: boolean = false;
     @State() activeSelector: string = '';
     @State() activeSelectorLetter: string = '';
     @State() selectors: string = '';
+    @State() activeSelectors: string[] = [];
+    @State() siblings: Element[];
+
+    componentWillLoad() {
+        this.siblings = getAllSiblings(this.element);
+        this.activeSelectors = getActiveSelectors(this.siblings);
+    }
 
     setActiveSelector = (selector: string) => {
         this.toggleSelectors();
         this.activeSelector = selector;
         this.activeSelectorLetter = selector[0];
 
-        // this.siblings = getAllSiblings(this);
         // if (mode === 'sentence') {
         //     this.siblings.map(sib => {
         //         if (sib.nodeName === 'P') {
