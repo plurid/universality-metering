@@ -12,13 +12,12 @@ import { getNodeNames } from './dom';
  * for fragmentational selection, select 'word' and hold shift and click
  * on words for multiple selection
  *
- *
  * TEXT - 2
  * IMAGE - 1
  * VIDEO/CANVAS - 0
  */
 export const getActiveSelectors = (siblings: Element[]): string[] => {
-    const textSelectors = ['text', 'paragraph', 'sentence', 'word'];
+    const textSelectors = ['text', 'fragment', 'paragraph', 'sentence', 'word'];
     const nodeNames = new Set( flattenDeep(siblings.map(sib => getNodeNames(sib))) );
     const activeSelectorsUnord: number[] = [];
     const activeSelectors: string[] = [];
