@@ -25,6 +25,11 @@ universality-metering {
     font-size: 15px;
 }
 
+.universality-metering-selectors-group {
+    display: inherit;
+    flex-direction: row-reverse;
+}
+
 
 .universality-metering-selector {
     display: grid;

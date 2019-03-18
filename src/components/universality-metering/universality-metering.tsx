@@ -9,49 +9,55 @@ import { Component, State } from '@stencil/core';
 })
 export class UniversalityMetering {
 
-    @State() modeLetter: string = '';
+    @State() type: string = '';
+    @State() typeLetter: string = '';
     @State() selectors: string = '';
 
+    @State() toggledSelectors: boolean = false;
 
-    // setMode(mode: string) {
-    //     this.mode = mode;
-    //     this.modeLetter = this.mode[0];
-    //     this.siblings = getAllSiblings(this);
+    private activeTypes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
+
+    setType = (type: string) => {
+        this.type = type;
+        this.typeLetter = this.type[0];
+        console.log(type);
+        // console.log(this.modeLetter);
+        // this.siblings = getAllSiblings(this);
 
 
-    //     if (mode === 'sentence') {
-    //         this.siblings.map(sib => {
-    //             if (sib.nodeName === 'P') {
-    //                 const sentenceRegex = new RegExp('[^\.!\?]+[\.!\?]+', 'g');
-    //                 const sibText = sib.innerHTML;
-    //                 const sentences = sibText.match(sentenceRegex);
-    //                 const univSentences = document.createElement('p');
+        // if (mode === 'sentence') {
+        //     this.siblings.map(sib => {
+        //         if (sib.nodeName === 'P') {
+        //             const sentenceRegex = new RegExp('[^\.!\?]+[\.!\?]+', 'g');
+        //             const sibText = sib.innerHTML;
+        //             const sentences = sibText.match(sentenceRegex);
+        //             const univSentences = document.createElement('p');
 
-    //                 [...sentences].map(sentence => {
-    //                     const univMetS = document.createElement('universality-metering-s');
-    //                     univMetS.innerHTML = sentence.trim();
-    //                     univSentences.appendChild(univMetS);
-    //                 });
+        //             [...sentences].map(sentence => {
+        //                 const univMetS = document.createElement('universality-metering-s');
+        //                 univMetS.innerHTML = sentence.trim();
+        //                 univSentences.appendChild(univMetS);
+        //             });
 
-    //                 // console.log(sentences);
-    //                 sib.parentNode.insertBefore(univSentences, sib);
-    //                 sib.parentNode.removeChild(sib);
-    //             }
-    //         });
-    //     }
+        //             // console.log(sentences);
+        //             sib.parentNode.insertBefore(univSentences, sib);
+        //             sib.parentNode.removeChild(sib);
+        //         }
+        //     });
+        // }
 
-    //     if (mode === 'paragraph') {
-    //         this.siblings.map(sib => {
-    //             if (sib.nodeName === 'P') {
-    //                 const univMetP = document.createElement('universality-metering-p');
-    //                 sib.parentNode.insertBefore(univMetP, sib);
-    //                 univMetP.appendChild(sib);
-    //             }
-    //         });
-    //     }
+        // if (mode === 'paragraph') {
+        //     this.siblings.map(sib => {
+        //         if (sib.nodeName === 'P') {
+        //             const univMetP = document.createElement('universality-metering-p');
+        //             sib.parentNode.insertBefore(univMetP, sib);
+        //             univMetP.appendChild(sib);
+        //         }
+        //     });
+        // }
 
-    //     this.toggle();
-    // }
+        this.toggleSelectors();
+    }
 
 
     // clearMode = () => {
@@ -73,48 +79,41 @@ export class UniversalityMetering {
     //     this.modeLetter = '';
     // }
 
-    toggle = () => {
-        // const umBtn = this.getElementsByClassName('universality-metering-selector-um')[0];
-
-        // if (this.toggled === true) {
-        //     this.selectors = html``;
-        //     this.toggled = false;
-        //     umBtn.classList.remove('universality-metering-selector-um-toggled');
-        // } else {
-        //     this.selectors = html`
-        //         ${
-        //             this.activeModes.map((mode) => html`
-        //                 <div
-        //                     class="universality-metering-selector"
-        //                     @click=${ (e: Event) => this.setMode(mode) }
-        //                 >
-        //                     <span class="universality-metering-selector-kind">
-        //                         ${mode}
-        //                     </span>
-        //                 </div>
-        //             `)
-        //         }
-        //     `;
-
-        //     umBtn.classList.add('universality-metering-selector-um-toggled');
-        //     this.clearMode();
-        //     this.toggled = true;
-        // }
-
-        // this.requestUpdate();
-
+    toggleSelectors = () => {
+        this.toggledSelectors = !this.toggledSelectors;
     }
 
     render() {
         return (
             <div class="universality-metering-selectors">
                 <div
-                    class="universality-metering-selector universality-metering-selector-um"
-                    onClick={this.toggle}
+                    class={`
+                        universality-metering-selector
+                        universality-metering-selector-um
+                        ${this.toggledSelectors ? 'universality-metering-selector-um-toggled': ''}
+                    `}
+                    onClick={this.toggleSelectors}
                 >
-                    UM${this.modeLetter}
+                    UM{this.typeLetter}
                 </div>
-                ${ this.selectors }
+
+                {this.toggledSelectors &&
+                    (<div class="universality-metering-selectors-group">
+                        { this.activeTypes.map((type: string) => {
+                                return (
+                                    <div
+                                        class="universality-metering-selector"
+                                        onClick={this.setType.bind(this, type)}
+                                    >
+                                        <span class="universality-metering-selector-kind">
+                                            {type}
+                                        </span>
+                                    </div>
+                                );
+                            }
+                        )}
+                    </div>)
+                }
             </div>
         );
     }
