@@ -1,5 +1,7 @@
 import { Component, Prop } from '@stencil/core';
 
+import { capitalize } from '../../utils/strings';
+
 
 
 @Component({
@@ -8,7 +10,7 @@ import { Component, Prop } from '@stencil/core';
     shadow: true
 })
 export class UniversalityMeteringGrading {
-    @Prop() mode: string;
+    @Prop() selector: string;
 
     private gradingArea: any = (
         <div class="universality-metering-grading-area-crisp-slider-container">
@@ -16,10 +18,6 @@ export class UniversalityMeteringGrading {
             <span class="universality-metering-grading-area-crisp-slider-value">352</span>
         </div>
     );
-
-    capitalize = (str: string) => {
-        return str;
-    }
 
     render() {
         return (
@@ -70,7 +68,7 @@ export class UniversalityMeteringGrading {
 
                     <div class="universality-metering-grading-header-kind">
                         <div class="universality-metering-grading-header-kind-text">
-                            ${this.capitalize(this.mode)} Universality
+                            {capitalize(this.selector)} Universality
                         </div>
                         <div class="universality-metering-grading-header-kind-question-mark">
                             ?
@@ -87,7 +85,7 @@ export class UniversalityMeteringGrading {
                     </div>
                 </div>
                 <div class="universality-metering-grading-area">
-                    ${ this.gradingArea }
+                    { this.gradingArea }
                 </div>
                 <div class="universality-metering-grading-buttons">
                     <button class="universality-metering-grading-button">
