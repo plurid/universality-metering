@@ -9,22 +9,19 @@ import { Component, State } from '@stencil/core';
 })
 export class UniversalityMetering {
 
-    @State() type: string = '';
-    @State() typeLetter: string = '';
-    @State() selectors: string = '';
+    private activeSelectors = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
 
     @State() toggledSelectors: boolean = false;
+    @State() activeSelector: string = '';
+    @State() activeSelectorLetter: string = '';
+    @State() selectors: string = '';
 
-    private activeTypes = ['other', 'video', 'image', 'text', 'fragment', 'paragraph', 'sentence', 'word'];
+    setActiveSelector = (selector: string) => {
+        this.toggleSelectors();
+        this.activeSelector = selector;
+        this.activeSelectorLetter = selector[0];
 
-    setType = (type: string) => {
-        this.type = type;
-        this.typeLetter = this.type[0];
-        console.log(type);
-        // console.log(this.modeLetter);
         // this.siblings = getAllSiblings(this);
-
-
         // if (mode === 'sentence') {
         //     this.siblings.map(sib => {
         //         if (sib.nodeName === 'P') {
@@ -55,32 +52,30 @@ export class UniversalityMetering {
         //         }
         //     });
         // }
-
-        this.toggleSelectors();
     }
 
 
-    // clearMode = () => {
-    //     // console.log(this.mode);
-
-    //     if (this.mode === 'paragraph') {
-    //         this.siblings = getAllSiblings(this);
-    //         // console.log(this.siblings);
-    //         this.siblings.map(sib => {
-    //             if (sib.nodeName === 'UNIVERSALITY-METERING-P') {
-    //                 const p = sib.getElementsByTagName('p')[0];
-    //                 sib.parentNode.insertBefore(p, sib);
-    //                 sib.parentNode.removeChild(sib);
-    //             }
-    //         });
-    //     }
-
-    //     this.mode = '';
-    //     this.modeLetter = '';
-    // }
+    clearActiveSelector = () => {
+        if (this.toggledSelectors) {
+            this.activeSelector = '';
+            this.activeSelectorLetter = '';
+        }
+        // if (this.mode === 'paragraph') {
+        //     this.siblings = getAllSiblings(this);
+        //     // console.log(this.siblings);
+        //     this.siblings.map(sib => {
+        //         if (sib.nodeName === 'UNIVERSALITY-METERING-P') {
+        //             const p = sib.getElementsByTagName('p')[0];
+        //             sib.parentNode.insertBefore(p, sib);
+        //             sib.parentNode.removeChild(sib);
+        //         }
+        //     });
+        // }
+    }
 
     toggleSelectors = () => {
         this.toggledSelectors = !this.toggledSelectors;
+        this.clearActiveSelector();
     }
 
     render() {
@@ -94,19 +89,19 @@ export class UniversalityMetering {
                     `}
                     onClick={this.toggleSelectors}
                 >
-                    UM{this.typeLetter}
+                    UM{this.activeSelectorLetter}
                 </div>
 
                 {this.toggledSelectors &&
                     (<div class="universality-metering-selectors-group">
-                        { this.activeTypes.map((type: string) => {
+                        { this.activeSelectors.map((selector: string) => {
                                 return (
                                     <div
                                         class="universality-metering-selector"
-                                        onClick={this.setType.bind(this, type)}
+                                        onClick={this.setActiveSelector.bind(this, selector)}
                                     >
                                         <span class="universality-metering-selector-kind">
-                                            {type}
+                                            {selector}
                                         </span>
                                     </div>
                                 );
