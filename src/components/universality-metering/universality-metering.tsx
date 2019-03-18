@@ -80,6 +80,7 @@ export class UniversalityMetering {
 
     render() {
         return (
+            <div class="universality-metering-container">
             <div class="universality-metering-selectors">
                 <div
                     class={`
@@ -109,6 +110,7 @@ export class UniversalityMetering {
                         )}
                     </div>)
                 }
+            </div>
             </div>
         );
     }
