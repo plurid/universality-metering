@@ -1,0 +1,16 @@
+universality-metering-p {
+    position: relative;
+    display: block;
+}
+
+
+universality-metering-p:hover {
+    universality-metering-grading {
+        display: block;
+    }
+
+    > p {
+        cursor: pointer;
+        background-color: hsl(0, 0%, 75%);
+    }
+}
