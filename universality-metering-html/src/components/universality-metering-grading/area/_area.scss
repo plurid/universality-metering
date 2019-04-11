@@ -1,0 +1,11 @@
+@import './crisp';
+
+
+
+.universality-metering-grading-area {
+    display: grid;
+    grid-auto-columns: 1fr;
+    justify-items: center;
+    min-height: 70px;
+    align-items: center;
+}
