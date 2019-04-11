@@ -1,15 +1,15 @@
 {
-    "name": "universality-metering-html",
+    "name": "@plurid/universality-metering-html",
     "version": "0.1.1",
     "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content",
     "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/plurid/universality-metering-html.git"
+        "url": "https://github.com/plurid/universality-metering.git"
     },
     "bugs": {
-        "url": "https://github.com/plurid/universality-metering-html.git"
+        "url": "https://github.com/plurid/universality-metering.git"
     },
     "module": "dist/esm/index.js",
     "main": "dist/index.js",

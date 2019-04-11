@@ -1,15 +1,15 @@
 {
-    "name": "universality-metering-react",
+    "name": "@plurid/universality-metering-react",
     "version": "0.1.0",
     "description": "Grade user input. React implementation of universality-metering-html",
     "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/plurid/universality-metering-react.git"
+        "url": "git+https://github.com/plurid/universality-metering.git"
     },
     "bugs": {
-        "url": "https://github.com/plurid/universality-metering-react/issues"
+        "url": "https://github.com/plurid/universality-metering/issues"
     },
     "main": "dist/index.js",
     "module": "dist/index.es.js",
