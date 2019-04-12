@@ -1,6 +1,6 @@
 {
     "name": "@plurid/universality-metering-html",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - HTML Custom Elements implementation",
     "keywords": [
         "grading",
@@ -36,7 +36,6 @@
         "test.complete": "stencil test --spec --e2e",
         "test.watch": "stencil test --spec --e2e --watchAll"
     },
-    "dependencies": {},
     "devDependencies": {
         "@stencil/core": "~0.16.2",
         "@stencil/sass": "^0.1.1",

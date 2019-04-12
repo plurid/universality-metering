@@ -1,6 +1,6 @@
 {
     "name": "@plurid/universality-metering-chrome",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - Chrome Extension",
     "keywords": [
         "grading",
@@ -28,9 +28,5 @@
     "main": "dist/index.js",
     "types": "dist/types/components.d.ts",
     "collection": "dist/collection/collection-manifest.json",
-    "scripts": {
-    },
-    "dependencies": {},
-    "devDependencies": {
-    }
+    "scripts": {}
 }

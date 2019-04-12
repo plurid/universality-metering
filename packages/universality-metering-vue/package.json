@@ -1,6 +1,6 @@
 {
     "name": "@plurid/universality-metering-vue",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - Vue implementation",
     "keywords": [
         "grading",
@@ -33,9 +33,5 @@
     },
     "scripts": {
         "clean": "rm -rf ./dist"
-    },
-    "peerDependencies": {
-    },
-    "devDependencies": {
     }
 }
