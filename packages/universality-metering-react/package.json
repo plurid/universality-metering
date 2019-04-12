@@ -1,22 +1,32 @@
 {
     "name": "@plurid/universality-metering-react",
-    "version": "0.1.0",
-    "description": "Grade user input. React implementation of universality-metering-html",
-    "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
+    "version": "0.0.0",
+    "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - React implementation",
+    "keywords": [
+        "grading",
+        "metering",
+        "react"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/plurid/universality-metering.git"
+        "url": "https://github.com/plurid/universality-metering"
     },
     "bugs": {
+        "email": "feedback@plurid.com",
         "url": "https://github.com/plurid/universality-metering/issues"
     },
+    "homepage": "https://github.com/plurid/universality-metering/blob/master/packages/universality-metering-react",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist/"
+    ],
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "jsnext:main": "dist/index.es.js",
-    "files": [
-        "dist"
-    ],
     "engines": {
         "node": ">=8",
         "npm": ">=5"

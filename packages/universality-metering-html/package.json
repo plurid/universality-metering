@@ -1,23 +1,32 @@
 {
     "name": "@plurid/universality-metering-html",
-    "version": "0.1.1",
-    "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content",
-    "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
+    "version": "0.0.0",
+    "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - HTML Custom Elements implementation",
+    "keywords": [
+        "grading",
+        "metering"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/plurid/universality-metering.git"
+        "url": "https://github.com/plurid/universality-metering"
     },
     "bugs": {
-        "url": "https://github.com/plurid/universality-metering.git"
+        "email": "feedback@plurid.com",
+        "url": "https://github.com/plurid/universality-metering/issues"
     },
+    "homepage": "https://github.com/plurid/universality-metering/blob/master/packages/universality-metering-html",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist/"
+    ],
     "module": "dist/esm/index.js",
     "main": "dist/index.js",
     "types": "dist/types/components.d.ts",
     "collection": "dist/collection/collection-manifest.json",
-    "files": [
-        "dist/"
-    ],
     "scripts": {
         "clean": "rm -rf ./.stencil && rm -rf ./www && rm -rf ./dist",
         "build": "npm run clean && stencil build --docs",
