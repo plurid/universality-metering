@@ -1,22 +1,32 @@
 {
     "name": "@plurid/universality-metering-vue",
-    "version": "0.1.0",
-    "description": "Grade user input. Vue implementation of universality-metering",
-    "author": "Jan Cavel <mail@caveljan.com> (https://caveljan.com/)",
+    "version": "0.0.0",
+    "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - Vue implementation",
+    "keywords": [
+        "grading",
+        "metering",
+        "vue"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/plurid/universality-metering.git"
+        "url": "https://github.com/plurid/universality-metering"
     },
     "bugs": {
+        "email": "feedback@plurid.com",
         "url": "https://github.com/plurid/universality-metering/issues"
     },
+    "homepage": "https://github.com/plurid/universality-metering/blob/master/packages/universality-metering-vue",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist/"
+    ],
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "jsnext:main": "dist/index.es.js",
-    "files": [
-        "dist"
-    ],
     "engines": {
         "node": ">=8",
         "npm": ">=5"
