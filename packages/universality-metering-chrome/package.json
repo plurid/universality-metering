@@ -1,0 +1,36 @@
+{
+    "name": "@plurid/universality-metering-chrome",
+    "version": "0.0.0",
+    "description": "User Grading System Interface for High-Level Abstracted, Multi-Peer Influenced Content - Chrome Extension",
+    "keywords": [
+        "grading",
+        "metering"
+    ],
+    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
+    "license": "MIT",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/plurid/universality-metering"
+    },
+    "bugs": {
+        "email": "feedback@plurid.com",
+        "url": "https://github.com/plurid/universality-metering/issues"
+    },
+    "homepage": "https://github.com/plurid/universality-metering/blob/master/packages/universality-metering-chrome",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "dist/"
+    ],
+    "module": "dist/esm/index.js",
+    "main": "dist/index.js",
+    "types": "dist/types/components.d.ts",
+    "collection": "dist/collection/collection-manifest.json",
+    "scripts": {
+    },
+    "dependencies": {},
+    "devDependencies": {
+    }
+}
