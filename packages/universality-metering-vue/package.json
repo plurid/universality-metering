@@ -7,14 +7,14 @@
         "metering",
         "vue"
     ],
-    "author": "Jan Cavel <caveljan@plurid.com> (https://plurid.com)",
+    "author": "ly3xqhl8g9 <ly3xqhl8g9@plurid.com> (https://plurid.com)",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/plurid/universality-metering"
     },
     "bugs": {
-        "email": "feedback@plurid.com",
+        "email": "sourc@plurid.com",
         "url": "https://github.com/plurid/universality-metering/issues"
     },
     "homepage": "https://github.com/plurid/universality-metering/blob/master/packages/universality-metering-vue",
